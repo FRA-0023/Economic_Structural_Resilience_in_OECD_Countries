@@ -3,13 +3,19 @@
         "DATAFLOW"
     ],
     "STRUCTURE_ID": [
-        "OECD.ELS.SAE:DSD_LFS@DF_LFS_INDIC(1.1)"
+        "OECD.SDD.NAD:DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_HCPC(2.0)"
     ],
     "STRUCTURE_NAME": [
-        "Employment and unemployment by five-year age group and sex - indicators"
+        "Annual GDP and consumption per capita, US $, current prices, current PPPs"
     ],
     "ACTION": [
         "I"
+    ],
+    "FREQ": [
+        "A"
+    ],
+    "Frequency of observation": [
+        "Annual"
     ],
     "Reference area": [
         "Australia",
@@ -17,8 +23,6 @@
         "Belgium",
         "Canada",
         "Chile",
-        "Colombia",
-        "Costa Rica",
         "Czechia",
         "Denmark",
         "Estonia",
@@ -27,183 +31,169 @@
         "Germany",
         "Greece",
         "Hungary",
-        "Iceland",
         "Ireland",
         "Israel",
         "Italy",
-        "Japan",
         "Korea",
         "Latvia",
         "Lithuania",
-        "Luxembourg",
-        "Mexico",
         "Netherlands",
         "New Zealand",
-        "Norway",
         "Poland",
         "Portugal",
         "Slovak Republic",
         "Slovenia",
         "Spain",
         "Sweden",
-        "Switzerland",
-        "T\u00fcrkiye",
         "United Kingdom",
-        "United States",
-        "G7",
-        "European Union (27 countries)",
-        "European Union (19 countries) in OECD",
-        "European Union (22 countries) in OECD",
-        "OECD",
-        "OECD average country",
-        "Brazil",
         "Bulgaria",
         "Croatia",
-        "Cyprus",
-        "India",
-        "Indonesia",
-        "Malta",
-        "North Macedonia",
         "Romania",
+        "Luxembourg",
+        "European Union (15 countries)",
+        "Mexico",
+        "Colombia",
+        "Cabo Verde",
+        "Cameroon",
+        "Georgia",
+        "European Union (27 countries from 01/02/2020)",
+        "Costa Rica",
+        "Hong Kong (China)",
+        "Morocco",
+        "Iceland",
+        "OECD Europe",
+        "OECD",
+        "OECD (26 countries)",
+        "Serbia",
+        "Cyprus",
+        "Saudi Arabia",
+        "Madagascar",
         "Russia",
-        "South Africa",
+        "United States",
+        "North Macedonia",
+        "Japan",
+        "T\u00fcrkiye",
+        "Indonesia",
+        "India",
+        "Norway",
+        "Switzerland",
+        "Euro area (20 countries)",
+        "Albania",
+        "Malta",
+        "Senegal",
+        "Zambia",
         "China (People\u2019s Republic of)",
+        "South Africa",
+        "Singapore",
         "Argentina",
-        "Europe",
-        "Peru"
+        "Brazil"
     ],
-    "MEASURE": [
-        "EMP_RATIO",
-        "LF_RATE",
-        "UNE_RATE"
+    "SECTOR": [
+        "S1",
+        "S14"
     ],
-    "Measure": [
-        "Employment to population ratio",
-        "Labour force participation rate",
-        "Unemployment rate"
+    "Institutional sector": [
+        "Total economy",
+        "Households"
+    ],
+    "COUNTERPART_SECTOR": [
+        "S1"
+    ],
+    "Counterpart institutional sector": [
+        "Total economy"
+    ],
+    "TRANSACTION": [
+        "B1GQ_POP",
+        "P3_POP",
+        "P41_POP"
+    ],
+    "Transaction": [
+        "Gross domestic product, per capita",
+        "Final consumption expenditure, per capita",
+        "Actual individual consumption, per capita"
+    ],
+    "INSTR_ASSET": [
+        "_Z"
+    ],
+    "Financial instruments and non-financial assets": [
+        "Not applicable"
+    ],
+    "ACTIVITY": [
+        "_Z"
+    ],
+    "Economic activity": [
+        "Not applicable"
+    ],
+    "EXPENDITURE": [
+        "_Z",
+        "_T"
+    ],
+    "Expenditure": [
+        "Not applicable",
+        "Total"
     ],
     "UNIT_MEASURE": [
-        "PT_POP_SUB",
-        "PT_LF_SUB"
+        "USD_PPP_PS"
     ],
     "Unit of measure": [
-        "Percentage of population in the same subgroup",
-        "Percentage of labour force in the same subgroup"
+        "US dollars per person, PPP converted"
     ],
-    "SEX": [
-        "_T",
-        "M",
-        "F"
+    "PRICE_BASE": [
+        "V"
     ],
-    "Sex": [
-        "Total",
-        "Male",
-        "Female"
+    "Price base": [
+        "Current prices"
     ],
-    "AGE": [
-        "Y_GE65",
-        "Y35T44",
-        "Y15T64",
-        "Y25T29",
-        "Y55T59",
-        "Y20T24",
-        "Y_GE70",
-        "Y50T54",
-        "Y25T34",
-        "Y55T64",
-        "Y15T24",
-        "Y20T64",
-        "Y45T49",
-        "Y45T54",
-        "Y40T44",
-        "Y65T69",
-        "Y15T19",
-        "_T",
-        "Y25T54",
-        "Y30T34",
-        "Y60T64",
-        "Y35T39",
-        "Y25T64",
-        "Y_GE75",
-        "Y70T74",
-        "Y75T79",
-        "_U",
-        "Y25T39",
-        "Y40T49",
-        "Y65T74",
-        "Y_GE80",
-        "Y_GE85",
-        "Y80T84",
-        "Y80T99",
-        "Y15T29",
-        "Y15T74",
-        "Y85T99"
+    "TRANSFORMATION": [
+        "N"
     ],
-    "Age": [
-        "65 years or over",
-        "From 35 to 44 years",
-        "From 15 to 64 years",
-        "From 25 to 29 years",
-        "From 55 to 59 years",
-        "From 20 to 24 years",
-        "70 years or over",
-        "From 50 to 54 years",
-        "From 25 to 34 years",
-        "From 55 to 64 years",
-        "From 15 to 24 years",
-        "From 20 to 64 years",
-        "From 45 to 49 years",
-        "From 45 to 54 years",
-        "From 40 to 44 years",
-        "From 65 to 69 years",
-        "From 15 to 19 years",
-        "Total",
-        "From 25 to 54 years",
-        "From 30 to 34 years",
-        "From 60 to 64 years",
-        "From 35 to 39 years",
-        "From 25 to 64 years",
-        "75 years or over",
-        "From 70 to 74 years",
-        "From 75 to 79 years",
-        "Unknown",
-        "From 25 to 39 years",
-        "From 40 to 49 years",
-        "From 65 to 74 years",
-        "80 years or over",
-        "85 years or over",
-        "From 80 to 84 years",
-        "From 80 to 99 years",
-        "From 15 to 29 years",
-        "From 15 to 74 years",
-        "From 85 to 99 years"
+    "Transformation": [
+        "Non transformed data"
     ],
-    "LABOUR_FORCE_STATUS": [
-        "EMP",
-        "LF",
-        "UNE"
+    "TABLE_IDENTIFIER": [
+        "T0102"
     ],
-    "Labour force status": [
-        "Employment",
-        "Labour force",
-        "Unemployment"
+    "Table identifier": [
+        "Table 0102 - GDP identity from the expenditure side"
     ],
     "Time period": [],
     "Observation value": [],
+    "REF_YEAR_PRICE": [],
+    "Price reference year": [],
+    "CONF_STATUS": [
+        "F"
+    ],
+    "Confidentiality status": [
+        "Free (free for publication)"
+    ],
+    "DECIMALS": [
+        1
+    ],
+    "Decimals": [
+        "One"
+    ],
     "OBS_STATUS": [
         "A",
+        "E",
+        "P",
         "B"
     ],
     "Observation status": [
         "Normal value",
+        "Estimated value",
+        "Provisional value",
         "Time series break"
     ],
-    "UNIT_MULT": [],
-    "Unit multiplier": [],
-    "DECIMALS": [
-        1.0
+    "UNIT_MULT": [
+        0
     ],
-    "Decimals": [
-        "One"
+    "Unit multiplier": [
+        "Units"
+    ],
+    "CURRENCY": [
+        "_Z"
+    ],
+    "Currency": [
+        "Not applicable"
     ]
 }
