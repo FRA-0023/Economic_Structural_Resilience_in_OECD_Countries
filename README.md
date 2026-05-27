@@ -100,31 +100,23 @@ The full dataset is downloaded first, cleaned, normalized, and only afterwards d
 
 Each country is represented as a normalized multidimensional vector:
 
-[
-x = (x_1, x_2, x_3, x_4, x_5)
-]
+$$x = (x_1, x_2, x_3, x_4, x_5)$$
 
 The project uses **ε-dominance** instead of strict Pareto dominance to avoid artificial comparisons caused by statistical noise.
 
 Country A dominates country B if:
 
-[
-x_i(A) \ge x_i(B) - \varepsilon_i \quad \forall i
-]
+$$x_i(A) \ge x_i(B) - \varepsilon_i \quad \forall i$$
 
 and:
 
-[
-x_j(A) > x_j(B) + \varepsilon_j
-]
+$$x_j(A) > x_j(B) + \varepsilon_j$$
 
 for at least one variable (j).
 
 Where:
 
-[
-\varepsilon_i = 0.1 \cdot \sigma_i
-]
+$$\varepsilon_i = 0.1 \cdot \sigma_i$$
 
 and (\sigma_i) is the standard deviation of variable (i).
 
