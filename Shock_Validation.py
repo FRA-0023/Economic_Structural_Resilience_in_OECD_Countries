@@ -25,9 +25,12 @@
 #   Productivity
 #
 # OUTPUT:
-#   - country_resilience_scores.csv
-#   - level_validation_results.csv
-#   - statistical_validation.csv
+#   - country_resilience_scores_{shock_id}.csv  (one per shock)
+#   - level_validation_results_{shock_id}.csv   (one per shock)
+#   - statistical_validation_{shock_id}.csv     (one per shock)
+#   - combined_resilience_scores.csv            (averaged across shocks)
+#   - combined_level_validation.csv             (averaged across shocks)
+#   - combined_statistical_validation.csv       (both shocks)
 # ============================================================
 
 import pandas as pd
@@ -44,9 +47,31 @@ from sklearn.preprocessing import RobustScaler
 # CONFIGURATION
 # ============================================================
 
-PRE_SHOCK_YEAR = 2019
-SHOCK_START = 2020
-SHOCK_END = 2022
+# Each shock is defined by:
+#   id          : short label used in filenames and reports
+#   pre_start   : first year of the pre-shock baseline window
+#   pre_end     : last  year of the pre-shock baseline window
+#   shock_start : first year of the shock window
+#   shock_end   : last  year of the shock window
+
+SHOCKS = [
+    {
+        "id":          "GFC_2008",
+        "label":       "Global Financial Crisis (2008)",
+        "pre_start":   2005,
+        "pre_end":     2007,
+        "shock_start": 2008,
+        "shock_end":   2010,
+    },
+    {
+        "id":          "COVID_2020",
+        "label":       "COVID-19 Pandemic (2020)",
+        "pre_start":   2017,
+        "pre_end":     2019,
+        "shock_start": 2020,
+        "shock_end":   2022,
+    },
+]
 
 MISSING_THRESHOLD = 0.30
 
@@ -85,7 +110,7 @@ shock_df = remove_high_missing_countries(
 # COUNTRY-WISE INTERPOLATION
 # ============================================================
 
-validation_columns = [
+VALIDATION_COLUMNS = [
     "GDP_Growth",
     "Inflation",
     "Unemployment",
@@ -96,7 +121,7 @@ shock_df = shock_df.sort_values(
     ["Country", "Year"]
 )
 
-for col in validation_columns:
+for col in VALIDATION_COLUMNS:
 
     # Rolling interpolation
     shock_df[col] = (
@@ -121,24 +146,33 @@ for col in validation_columns:
 # SHOCK RESILIENCE METRICS
 # ============================================================
 
-def compute_shock_resilience(df):
+def compute_shock_resilience(df, shock_cfg):
+    """
+    Compute per-country resilience metrics for a single
+    shock episode defined by shock_cfg.
+    """
+
+    pre_start   = shock_cfg["pre_start"]
+    pre_end     = shock_cfg["pre_end"]
+    shock_start = shock_cfg["shock_start"]
+    shock_end   = shock_cfg["shock_end"]
 
     results = []
 
-    countries = df["Country"].unique()
-
-    for country in countries:
+    for country in df["Country"].unique():
 
         cdf = df[df["Country"] == country]
 
         pre_shock = cdf[
-            cdf["Year"] < SHOCK_START
+            (cdf["Year"] >= pre_start)
+            &
+            (cdf["Year"] <= pre_end)
         ]
 
         shock_period = cdf[
-            (cdf["Year"] >= SHOCK_START)
+            (cdf["Year"] >= shock_start)
             &
-            (cdf["Year"] <= SHOCK_END)
+            (cdf["Year"] <= shock_end)
         ]
 
         if len(pre_shock) == 0:
@@ -147,303 +181,323 @@ def compute_shock_resilience(df):
         if len(shock_period) == 0:
             continue
 
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # GDP RESILIENCE
         # Higher = better
-        # ----------------------------------------------------
+        # ------------------------------------------------
 
-        baseline_gdp = pre_shock[
-            "GDP_Growth"
-        ].mean()
+        baseline_gdp = pre_shock["GDP_Growth"].mean()
+        worst_gdp    = shock_period["GDP_Growth"].min()
 
-        worst_gdp = shock_period[
-            "GDP_Growth"
-        ].min()
+        gdp_resilience = worst_gdp - baseline_gdp
 
-        gdp_resilience = (
-            worst_gdp - baseline_gdp
-        )
-
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # UNEMPLOYMENT RESILIENCE
         # Lower unemployment increase = better
-        # Variables already directionally harmonized
-        # ----------------------------------------------------
+        # ------------------------------------------------
 
-        baseline_unemp = pre_shock[
-            "Unemployment"
-        ].mean()
+        baseline_unemp = pre_shock["Unemployment"].mean()
+        worst_unemp    = shock_period["Unemployment"].max()
 
-        worst_unemp = shock_period[
-            "Unemployment"
-        ].max()
+        unemployment_resilience = baseline_unemp - worst_unemp
 
-        unemployment_resilience = (
-            baseline_unemp - worst_unemp
-        )
-
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # PRODUCTIVITY RESILIENCE
-        # ----------------------------------------------------
+        # ------------------------------------------------
 
-        baseline_prod = pre_shock[
-            "Productivity"
-        ].mean()
+        baseline_prod = pre_shock["Productivity"].mean()
+        worst_prod    = shock_period["Productivity"].min()
 
-        worst_prod = shock_period[
-            "Productivity"
-        ].min()
+        productivity_resilience = worst_prod - baseline_prod
 
-        productivity_resilience = (
-            worst_prod - baseline_prod
-        )
-
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # INFLATION STABILITY
         # Lower volatility = better
-        # ----------------------------------------------------
+        # ------------------------------------------------
 
-        inflation_stability = -(
-            shock_period["Inflation"].std()
-        )
+        inflation_stability = -(shock_period["Inflation"].std())
 
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # RECOVERY SPEED
-        # Faster recovery = better
-        # ----------------------------------------------------
+        # Faster return to pre-shock GDP = better
+        # ------------------------------------------------
 
         recovery_year = None
 
         for _, row in shock_period.iterrows():
-
             if row["GDP_Growth"] >= baseline_gdp:
                 recovery_year = row["Year"]
                 break
 
         if recovery_year is None:
-            recovery_score = -(
-                SHOCK_END - SHOCK_START + 1
-            )
+            recovery_score = -(shock_end - shock_start + 1)
         else:
-            recovery_score = -(
-                recovery_year - SHOCK_START
-            )
+            recovery_score = -(recovery_year - shock_start)
 
-        # ----------------------------------------------------
+        # ------------------------------------------------
         # STORE
-        # ----------------------------------------------------
+        # ------------------------------------------------
 
         results.append({
-
-            "Country": country,
-
-            "GDP_Resilience":
-                gdp_resilience,
-
-            "Unemployment_Resilience":
-                unemployment_resilience,
-
-            "Productivity_Resilience":
-                productivity_resilience,
-
-            "Inflation_Stability":
-                inflation_stability,
-
-            "Recovery_Speed":
-                recovery_score
+            "Country":                   country,
+            "Shock_ID":                  shock_cfg["id"],
+            "GDP_Resilience":            gdp_resilience,
+            "Unemployment_Resilience":   unemployment_resilience,
+            "Productivity_Resilience":   productivity_resilience,
+            "Inflation_Stability":       inflation_stability,
+            "Recovery_Speed":            recovery_score,
         })
 
     return pd.DataFrame(results)
 
-resilience_df = compute_shock_resilience(
-    shock_df
-)
-
 # ============================================================
-# ROBUST NORMALIZATION
+# ROBUST NORMALISATION  +  GLOBAL SCORE
 # ============================================================
 
-metrics = [
+METRICS = [
     "GDP_Resilience",
     "Unemployment_Resilience",
     "Productivity_Resilience",
     "Inflation_Stability",
-    "Recovery_Speed"
+    "Recovery_Speed",
 ]
 
-scaler = RobustScaler()
-
-resilience_df[metrics] = scaler.fit_transform(
-    resilience_df[metrics]
-)
-
-# ============================================================
-# GLOBAL SHOCK RESILIENCE SCORE
-# ============================================================
-
-resilience_df["Shock_Resilience_Score"] = (
-    resilience_df[metrics]
-    .mean(axis=1)
-)
-
-# ============================================================
-# MERGE WITH POSET RESULTS
-# ============================================================
-
-merged_df = pd.merge(
-    poset_df,
-    resilience_df,
-    on="Country",
-    how="inner"
-)
+def normalise_and_score(resilience_df):
+    """
+    Apply RobustScaler to the five raw metrics and compute
+    the composite Shock_Resilience_Score.
+    """
+    scaler = RobustScaler()
+    resilience_df[METRICS] = scaler.fit_transform(
+        resilience_df[METRICS]
+    )
+    resilience_df["Shock_Resilience_Score"] = (
+        resilience_df[METRICS].mean(axis=1)
+    )
+    return resilience_df
 
 # ============================================================
-# VALIDATION BY POSET LEVEL
+# VALIDATION HELPERS
 # ============================================================
 
-level_results = (
-
-    merged_df
-    .groupby("Poset_Level")[
-        "Shock_Resilience_Score"
+def level_summary(merged_df):
+    """Descriptive statistics per POSet level."""
+    out = (
+        merged_df
+        .groupby("Poset_Level")["Shock_Resilience_Score"]
+        .agg(["mean", "median", "std", "count"])
+        .reset_index()
+    )
+    out.columns = [
+        "Poset_Level",
+        "Mean_Resilience",
+        "Median_Resilience",
+        "Std_Resilience",
+        "N_Countries",
     ]
-    .agg([
-        "mean",
-        "median",
-        "std",
-        "count"
-    ])
+    return out
+
+
+def statistical_tests(merged_df):
+    """Spearman correlation + Kruskal-Wallis across POSet levels."""
+
+    spearman_corr, spearman_p = spearmanr(
+        merged_df["Poset_Level"],
+        merged_df["Shock_Resilience_Score"]
+    )
+
+    groups = [
+        merged_df[merged_df["Poset_Level"] == lvl]["Shock_Resilience_Score"]
+        for lvl in sorted(merged_df["Poset_Level"].unique())
+    ]
+
+    kruskal_stat, kruskal_p = kruskal(*groups)
+
+    return pd.DataFrame({
+        "Metric": [
+            "Spearman_Correlation",
+            "Spearman_PValue",
+            "Kruskal_Statistic",
+            "Kruskal_PValue",
+        ],
+        "Value": [
+            spearman_corr,
+            spearman_p,
+            kruskal_stat,
+            kruskal_p,
+        ],
+    })
+
+# ============================================================
+# MAIN LOOP — one run per shock episode
+# ============================================================
+
+all_resilience   = []   # raw (pre-normalisation) frames
+all_level        = []
+all_stats        = []
+
+for shock_cfg in SHOCKS:
+
+    shock_id = shock_cfg["id"]
+
+    print("=" * 60)
+    print(f"PROCESSING SHOCK: {shock_cfg['label']}")
+    print("=" * 60)
+
+    # ----------------------------------------------------------
+    # Compute raw resilience metrics
+    # ----------------------------------------------------------
+
+    res_df = compute_shock_resilience(shock_df, shock_cfg)
+
+    # ----------------------------------------------------------
+    # Normalise within this shock episode
+    # ----------------------------------------------------------
+
+    res_df = normalise_and_score(res_df)
+
+    # ----------------------------------------------------------
+    # Merge with POSet levels
+    # ----------------------------------------------------------
+
+    merged = pd.merge(
+        poset_df[["Country", "Poset_Level"]],
+        res_df,
+        on="Country",
+        how="inner"
+    )
+
+    # ----------------------------------------------------------
+    # Level summary + statistical tests
+    # ----------------------------------------------------------
+
+    lv = level_summary(merged)
+    lv["Shock_ID"] = shock_id
+
+    st = statistical_tests(merged)
+    st["Shock_ID"] = shock_id
+
+    # ----------------------------------------------------------
+    # Print
+    # ----------------------------------------------------------
+
+    print()
+    print("LEVEL-BASED RESILIENCE")
+    print(lv.drop(columns="Shock_ID").to_string(index=False))
+    print()
+    print(f"Spearman Correlation : {st.loc[st['Metric']=='Spearman_Correlation','Value'].values[0]:.4f}")
+    print(f"Spearman P-Value     : {st.loc[st['Metric']=='Spearman_PValue','Value'].values[0]:.4f}")
+    print(f"Kruskal Statistic    : {st.loc[st['Metric']=='Kruskal_Statistic','Value'].values[0]:.4f}")
+    print(f"Kruskal P-Value      : {st.loc[st['Metric']=='Kruskal_PValue','Value'].values[0]:.4f}")
+    print()
+
+    spearman_corr = st.loc[st["Metric"] == "Spearman_Correlation", "Value"].values[0]
+
+    if spearman_corr < 0:
+        print("Validation: higher POSet levels → lower resilience  ✓")
+    else:
+        print("No negative monotonic relationship detected.")
+
+    print()
+
+    # ----------------------------------------------------------
+    # Per-shock CSVs
+    # ----------------------------------------------------------
+
+    res_df.to_csv(
+        f"country_resilience_scores_{shock_id}.csv",
+        index=False
+    )
+
+    lv.to_csv(
+        f"level_validation_results_{shock_id}.csv",
+        index=False
+    )
+
+    st.to_csv(
+        f"statistical_validation_{shock_id}.csv",
+        index=False
+    )
+
+    # ----------------------------------------------------------
+    # Accumulate for combined outputs
+    # ----------------------------------------------------------
+
+    merged["Shock_ID"] = shock_id
+    all_resilience.append(merged)
+    all_level.append(lv)
+    all_stats.append(st)
+
+# ============================================================
+# COMBINED OUTPUT
+# ============================================================
+
+combined_resilience = pd.concat(all_resilience, ignore_index=True)
+combined_level      = pd.concat(all_level,      ignore_index=True)
+combined_stats      = pd.concat(all_stats,      ignore_index=True)
+
+# ----------------------------------------------------------
+# Average resilience score per country across both shocks
+# ----------------------------------------------------------
+
+avg_resilience = (
+    combined_resilience
+    .groupby("Country")
+    .agg(
+        Poset_Level=("Poset_Level", "first"),
+        Mean_Shock_Resilience_Score=("Shock_Resilience_Score", "mean"),
+        N_Shocks=("Shock_Resilience_Score", "count"),
+    )
     .reset_index()
 )
 
-level_results.columns = [
-    "Poset_Level",
-    "Mean_Resilience",
-    "Median_Resilience",
-    "Std_Resilience",
-    "N_Countries"
-]
+# ----------------------------------------------------------
+# Average level statistics across both shocks
+# ----------------------------------------------------------
 
-# ============================================================
-# MONOTONIC VALIDATION
-# ============================================================
-# Higher POSet levels should exhibit
-# lower resilience.
-# ============================================================
-
-spearman_corr, spearman_p = spearmanr(
-    merged_df["Poset_Level"],
-    merged_df["Shock_Resilience_Score"]
-)
-
-# ============================================================
-# KRUSKAL-WALLIS TEST
-# ============================================================
-# Non-parametric comparison between levels
-# ============================================================
-
-groups = []
-
-for level in sorted(
-    merged_df["Poset_Level"].unique()
-):
-
-    group = merged_df[
-        merged_df["Poset_Level"] == level
-    ]["Shock_Resilience_Score"]
-
-    groups.append(group)
-
-kruskal_stat, kruskal_p = kruskal(*groups)
-
-# ============================================================
-# SAVE RESULTS
-# ============================================================
-
-resilience_df.to_csv(
-    "country_resilience_scores.csv",
-    index=False
-)
-
-level_results.to_csv(
-    "level_validation_results.csv",
-    index=False
-)
-
-stats_df = pd.DataFrame({
-
-    "Metric": [
-
-        "Spearman_Correlation",
-        "Spearman_PValue",
-        "Kruskal_Statistic",
-        "Kruskal_PValue"
-    ],
-
-    "Value": [
-
-        spearman_corr,
-        spearman_p,
-        kruskal_stat,
-        kruskal_p
-    ]
-})
-
-stats_df.to_csv(
-    "statistical_validation.csv",
-    index=False
-)
-
-# ============================================================
-# TERMINAL OUTPUT
-# ============================================================
-
-print("=" * 60)
-print("POSET SHOCK VALIDATION")
-print("=" * 60)
-
-print()
-print("LEVEL-BASED RESILIENCE")
-print(level_results)
-
-print()
-print("=" * 60)
-
-print(
-    f"Spearman Correlation: "
-    f"{spearman_corr:.4f}"
-)
-
-print(
-    f"Spearman P-Value: "
-    f"{spearman_p:.4f}"
-)
-
-print()
-print(
-    f"Kruskal Statistic: "
-    f"{kruskal_stat:.4f}"
-)
-
-print(
-    f"Kruskal P-Value: "
-    f"{kruskal_p:.4f}"
-)
-
-print()
-print("=" * 60)
-
-if spearman_corr < 0:
-    print(
-        "Validation successful:"
+avg_level = (
+    combined_level
+    .groupby("Poset_Level")
+    .agg(
+        Mean_Resilience=("Mean_Resilience", "mean"),
+        Median_Resilience=("Median_Resilience", "mean"),
+        Std_Resilience=("Std_Resilience", "mean"),
+        N_Countries=("N_Countries", "mean"),
     )
-    print(
-        "higher POSet levels are associated "
-        "with lower resilience."
-    )
-else:
-    print(
-        "No negative monotonic relationship detected."
-    )
+    .reset_index()
+)
+
+# ----------------------------------------------------------
+# Save combined CSVs
+# ----------------------------------------------------------
+
+avg_resilience.to_csv("combined_resilience_scores.csv",     index=False)
+avg_level.to_csv("combined_level_validation.csv",      index=False)
+combined_stats.to_csv("combined_statistical_validation.csv", index=False)
+
+# ============================================================
+# COMBINED TERMINAL SUMMARY
+# ============================================================
+
+print("=" * 60)
+print("COMBINED VALIDATION SUMMARY (both shocks)")
+print("=" * 60)
+print()
+print(avg_level.to_string(index=False))
+print()
+
+for shock_cfg in SHOCKS:
+    shock_id = shock_cfg["id"]
+    sub = combined_stats[combined_stats["Shock_ID"] == shock_id]
+
+    def val(metric):
+        return sub.loc[sub["Metric"] == metric, "Value"].values[0]
+
+    print(f"--- {shock_cfg['label']} ---")
+    print(f"  Spearman r = {val('Spearman_Correlation'):.4f}  "
+          f"(p = {val('Spearman_PValue'):.4f})")
+    print(f"  Kruskal H  = {val('Kruskal_Statistic'):.4f}  "
+          f"(p = {val('Kruskal_PValue'):.4f})")
+    print()
 
 print("=" * 60)
