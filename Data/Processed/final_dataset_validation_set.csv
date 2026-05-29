@@ -1,4 +1,4 @@
-year,country,Inflation_Rate,Unemployment_Variation,Worldwide_Governance_Indicators,Productivity_Variation,GDP_Growth
+year,country,OECD_Inflation_CPI_2000_2025,OECD_Unemployment_Rate_2000_2025,Worldwide_Governance_Indicators,OECD_Productivity_Variation_2000_2025,OECD_GDP_Growth_2000_2025
 2000,AGO,,,27.4712574,,
 2000,ALB,,,47.6615336,,
 2000,ARE,,,42.0815546,,
