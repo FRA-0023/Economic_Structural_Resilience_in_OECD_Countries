@@ -1,0 +1,11 @@
+file_name,dataset_name,file_type,rows,columns
+Eurostat_Public_Debt_GDP_2000_2025.csv,Eurostat_Public_Debt_GDP_2000_2025,csv,702,3
+Global_Energy_Dependency_0_100.csv,Global_Energy_Dependency_0_100,csv,3151,3
+Global_Public_Debt_GDP_2000_2025.csv,Global_Public_Debt_GDP_2000_2025,csv,788,3
+OECD_GDP_Growth_2000_2025.csv,OECD_GDP_Growth_2000_2025,csv,1314,3
+OECD_Inflation_CPI_2000_2025.csv,OECD_Inflation_CPI_2000_2025,csv,1362,3
+OECD_Productivity_Variation_2000_2025.csv,OECD_Productivity_Variation_2000_2025,csv,4247,3
+OECD_RD_GDP_2000_2025.csv,OECD_RD_GDP_2000_2025,csv,1127,3
+OECD_Tertiary_Education_2000_2025.csv,OECD_Tertiary_Education_2000_2025,csv,1003,3
+OECD_Unemployment_Rate_2000_2025.csv,OECD_Unemployment_Rate_2000_2025,csv,1392,3
+Worldwide_Governance_Indicators.xlsx,Worldwide_Governance_Indicators,xlsx,5444,51
