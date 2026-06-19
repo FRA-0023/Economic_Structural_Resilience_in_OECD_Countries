@@ -1,0 +1,6 @@
+variable,scaled_variable,min_value,max_value
+Energy_Import_Dependency,Energy_Import_Dependency_scaled,0.0,100.0
+Public_Debt_pct_GDP,Public_Debt_pct_GDP_scaled,0.0,174.2
+R&D_Expenditure_pct_GDP,R&D_Expenditure_pct_GDP_scaled,0.3195,5.7912
+Tertiary_Education_Attainment,Tertiary_Education_Attainment_scaled,18.2542,59.0203
+Gov_Score,Gov_Score_scaled,40.9941,90.9756

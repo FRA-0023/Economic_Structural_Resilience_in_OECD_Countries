@@ -1,0 +1,6 @@
+raw_variable,aligned_variable,direction,interpretation
+Energy_Import_Dependency,inflation_stability,inverted,lower inflation treated as better
+Public_Debt_pct_GDP,debt_capacity,inverted,lower debt treated as better
+R&D_Expenditure_pct_GDP,rd_intensity,positive,higher R&D intensity treated as better
+Tertiary_Education_Attainment,tertiary_education,positive,higher tertiary education treated as better
+Gov_Score,gov_effectiveness,positive,higher government effectiveness treated as better
