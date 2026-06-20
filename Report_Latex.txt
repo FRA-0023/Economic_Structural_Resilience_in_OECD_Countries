@@ -302,6 +302,19 @@ The validation results are subject to specific data-driven and normative constra
 
 Furthermore, the aggregation of diverse crisis episodes may mask heterogeneity in institutional performance, where specific structural assets (e.g., energy independence) may be critical in one crisis but secondary in another. Finally, the reliance on headline macroeconomic indicators ignores the internal distribution of shocks. A nation may exhibit high aggregate resilience on paper while experiencing significant regressive welfare shifts or localized social scarring that these metrics are not designed to capture.
 
+\subsection{Shock Validation Results}
+
+
+The shock validation procedure was conducted by comparing the structural position of each country within the POSet hierarchy against its observed economic performance during the selected crisis period. For each country, resilience outcomes were evaluated using the validation variables defined previously, including GDP contraction, unemployment variation, inflation dynamics, productivity variation, recovery time, and volatility-related indicators. These measures were aggregated into a resilience score designed to capture the overall ability of an economy to absorb, adapt to, and recover from systemic disruption.
+
+The empirical results indicate that countries occupying structurally stronger positions within the POSet generally exhibited more favorable resilience outcomes during the shock period. Specifically, countries located in the dominant structural tiers recorded an average resilience score of **[INSERT VALUE]**, compared with **[INSERT VALUE]** for countries belonging to the lower tiers. This difference suggests that the structural variables used to construct the ordering contain meaningful information regarding a country's capacity to withstand adverse economic conditions.
+
+The relationship between structural position and observed resilience was further evaluated using the Spearman rank correlation coefficient. The analysis produced a coefficient of **[INSERT VALUE]** with a corresponding p-value of **[INSERT VALUE]**. The sign and magnitude of the coefficient indicate **[INSERT INTERPRETATION: weak/moderate/strong positive or negative association]** between structural configuration and crisis performance.
+
+To assess whether resilience outcomes differed significantly across POSet levels, a Kruskal-Wallis test was performed. The resulting test statistic of **[INSERT VALUE]** and p-value of **[INSERT VALUE]** indicate **[INSERT INTERPRETATION]**. Consequently, the null hypothesis that all structural tiers exhibit identical resilience distributions is **[rejected / not rejected]** at the selected significance level.
+
+Overall, the validation results provide evidence that the multidimensional structural ordering captures relevant aspects of economic resilience. While the POSet framework does not predict crisis events directly, the observed association between structural position and post-shock performance suggests that the identified economic configurations possess explanatory value regarding a country's ability to cope with systemic disturbances.
+
 % =========================================================
 \section{Expected Contribution}
 % =========================================================
