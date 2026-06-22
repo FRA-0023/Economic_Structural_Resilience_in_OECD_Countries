@@ -1,0 +1,39 @@
+% =========================================================
+% FIGURES FOR POSET, ROBUSTNESS, AND SHOCK VALIDATION
+% Upload these image files to Overleaf first:
+% hasse_2007.png
+% hasse_2019.png
+% epsilon_sensitivity.png
+% recovery_validation.png
+% =========================================================
+
+% Put this after: Empirical POSet Results
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{hasse_2007.png}
+\caption{POSet Hasse diagram for the 2007 pre-GFC structural baseline. Nodes represent structural profiles, while directed links represent direct dominance relations after transitive reduction.}
+\label{fig:hasse_2007}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{hasse_2019.png}
+\caption{POSet Hasse diagram for the 2019 pre-COVID structural baseline. The diagram highlights both dominance relations and structural incomparability between countries.}
+\label{fig:hasse_2019}
+\end{figure}
+
+% Put this after: Robustness of the Partial Order
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{epsilon_sensitivity.png}
+\caption{Sensitivity of POSet dominance relations under alternative $\epsilon$-margin thresholds. Stable Pareto-frontier membership indicates that the main structural conclusions are not driven by negligible numerical differences.}
+\label{fig:epsilon_sensitivity}
+\end{figure}
+
+% Put this after: Shock Validation Results
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{recovery_validation.png}
+\caption{Recovery-time comparison between Pareto-frontier and non-frontier countries during the selected crisis episodes. Lower recovery time indicates faster economic recovery.}
+\label{fig:recovery_validation}
+\end{figure}
