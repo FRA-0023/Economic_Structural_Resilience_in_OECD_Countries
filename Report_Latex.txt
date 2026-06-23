@@ -154,7 +154,7 @@ OECD\_Inflation\_CPI
   & 2000--2025 & Validation \\
 OECD\_Productivity
   & OECD SDMX & DSD\_PDB@DF\_PDB\_LV $\cdot$ GDPHRS.USD\_PPP\_H.V
-  & 2000--2019 & Validation \\
+  & 2000--2024 & Validation \\
 WB\_Public\_Debt
   & World Bank & GC.DOD.TOTL.GD.ZS
   & 2000--2025 & Ordering \\
@@ -163,7 +163,7 @@ WB\_Energy\_Import
   & 2000--2025 & Ordering \\
 WGI (6 dimensions)
   & World Bank & WGI bulk CSV --- \seqsplit{databank.worldbank.org/data/download/WGI\_CSV.zip}
-  & 1996--2023 & Ordering \\
+  & 1996--2024 & Ordering \\
 Eurostat sdg\_07\_50
   & Eurostat & sdg\_07\_50 (REST dissemination API)
   & 2000--2024 & Ordering \\
@@ -177,7 +177,7 @@ Eurostat sdg\_07\_50
 \noindent\textit{\textbf{AI Tools Declaration.}
 Generative AI tools (Claude by Anthropic and ChatGPT by OpenAI) were employed
 exclusively for code refinement and debugging during the implementation of the
-data acquisition, preprocessing, and POSet construction pipeline.
+data acquisition, preprocessing and POSet construction pipeline.
 All research design decisions, methodological choices, analytical interpretations,
 and written content were produced independently by the authors.}
 
@@ -194,10 +194,11 @@ Economic resilience has become increasingly important in the context of systemic
 
 However, resilience is inherently multidimensional and structurally heterogeneous. Different countries may exhibit resilient behavior through fundamentally different economic configurations, making forced linear rankings methodologically problematic.
 
-This project proposes a Partial Order Theory (POSet) framework to study structural resilience across OECD economies without reducing the problem to a single composite score. The objective is to construct a multidimensional structural ordering capable of identifying the dominant economies, the vulnerable ones, and the incomparable configurations while keeping the data pipeline transparent and reproducible.
+This project proposes a Partial Order Theory (POSet) \cite{OECDResilience} framework to study structural resilience across OECD economies without reducing the problem to a single composite score. The objective is to construct a multidimensional structural ordering capable of identifying the dominant economies, the vulnerable ones and the incomparable configurations while keeping the data pipeline transparent and reproducible.
 
-The framework is then validated against major systemic shocks such as the 2008 financial crisis, and the COVID-19 crisis.
+The framework is then validated against major systemic shocks such as the 2008 financial crisis and the COVID-19 crisis.
 
+% =========================================================
 % =========================================================
 \section{Research Objective}
 % =========================================================
@@ -208,27 +209,42 @@ The main research question is:
 Which structural economic configurations are associated with stronger resilience during systemic crises?
 \end{quote}
 
-The project does not aim to predict crises directly. Instead, it investigates whether countries that occupy structurally dominant positions within a multidimensional economic ordering exhibit stronger adaptive capacity during major shocks.
+Answering this question requires resolving a prior issue that most existing resilience frameworks leave unexamined. Composite resilience indices, such as the type of vulnerability scorecards published by the WEF, the IMF and the OECD itself, reduce multiple structural dimensions to a single weighted scalar and in doing so they implicitly assume that any two countries can always be meaningfully ranked against one another. This assumption is rarely tested; it is built into the aggregation step itself. The consequence is that two countries which achieve resilience through fundamentally different structural routes, for instance one relying on fiscal conservatism and energy dependency, the other on fiscal flexibility and energy independence, can be assigned similar or directly comparable scores, even though their underlying configurations are not actually comparable in any economically meaningful sense. The research question pursued in this project therefore has two parts. The first is the precondition: to what extent are OECD economies structurally comparable to one another at all, as opposed to occupying distinct, non-comparable configurations? The second, which can only be answered honestly once the first has been addressed, is the original question: among the economies that are structurally comparable, does occupying a dominant position predict stronger resilience during systemic crises?
 
-% =========================================================
+Partial Order Theory is suited to this double question precisely because it does not presuppose comparability the way composite indices do. Rather than forcing a linear ranking onto every country pair, it tests directly for the existence of a dominance relation and treats incomparability not as a modelling failure but as a substantive and informative outcome in its own right \cite{Posets}.
+
+This double question is relevant to two distinct categories of stakeholders, each engaging primarily with one half of it. Policymakers and international institutions responsible for designing structural reform programmes, such as the EU Commission or the OECD itself, are primarily concerned with the comparable cases: if two economies are found to stand in a clear dominance relation, this provides a methodologically grounded basis for asking whether a reform path that succeeded in the dominant economy could plausibly transfer to the dominated one. Central banks, by contrast, are equally interested in the incomparability findings on their own terms, independently of crisis outcomes: if two member economies are found to be structurally incomparable ahead of a shock, this is itself relevant to understanding why a single monetary policy stance may transmit asymmetrically across them.
+
 % =========================================================
 \section{Data Acquisition & Preprocessing Pipeline}
 % =========================================================
 
-The project adopts a fully reproducible data acquisition pipeline implemented in Python. All datasets are collected and merged into a unified country-year panel structure indexed by country and year. The workflow integrates Eurostat, Worldwide Governance Indicators (WGI), and the OECD Data Explorer, with a source hierarchy chosen to avoid redundant downloads and duplicate country-year observations.
+The project adopts a fully reproducible data acquisition pipeline implemented in Python. All datasets are collected and merged into a unified country-year panel structure indexed by country and year. The workflow integrates Eurostat \cite{Eurostat}, Worldwide Governance Indicators \cite{WGI} (WGI) and the OECD Data Explorer \cite{OECD}, with a source hierarchy chosen to avoid redundant downloads and duplicate country-year observations.
 
-Most macroeconomic and structural variables are retrieved directly from the OECD API. These include R\&D expenditure, tertiary education attainment, GDP growth, unemployment, productivity, and inflation-related indicators. Public debt is handled differently: the pipeline now relies primarily on Eurostat for the public-debt series and merges it with the World Bank fallback only where Eurostat coverage is unavailable. This design choice removes the earlier OECD public-debt download and avoids maintaining two overlapping public-debt series for the same countries, creating a single source of truth for the following processes.  
+Most macroeconomic and structural variables are retrieved directly from the OECD API. These include R\&D expenditure, tertiary education attainment, GDP growth, unemployment, productivity and inflation-related indicators. Public debt is handled differently: the pipeline now relies primarily on Eurostat for the public-debt series and merges it with the World Bank fallback only where Eurostat coverage is unavailable. This design choice removes the earlier OECD public-debt download and avoids maintaining two overlapping public-debt series for the same countries, creating a single source of truth for the following processes.  
 
-Institutional robustness is approximated using governance-related indicators from the Worldwide Governance Indicators (WGI) database provided by the World Bank. The composite draws on all six available dimensions: Voice and Accountability, Political Stability and Absence of Violence, Government Effectiveness, Regulatory Quality, Rule of Law, and Control of Corruption. Given that governance indicators evolve considerably more slowly than macroeconomic variables, they are treated as quasi-static structural variables within the ordering framework rather than as cyclical signals.
+Institutional robustness is approximated using governance-related indicators from the Worldwide Governance Indicators (WGI) database provided by the World Bank. The composite draws on all six available dimensions: Voice and Accountability, Political Stability and Absence of Violence, Government Effectiveness, Regulatory Quality, Rule of Law and Control of Corruption. Given that governance indicators evolve considerably more slowly than macroeconomic variables, they are treated as quasi-static structural variables within the ordering framework rather than as cyclical signals.
 To aggregate the six WGI dimensions into a single institutional robustness score, a correlation-aware distance-to-ideal method is employed. Each country-year observation is evaluated against an ideal governance profile defined as the maximum attainable score across all six dimensions. The proximity of each observation to this ideal is then computed using the Mahalanobis distance, which accounts for the correlation structure among the dimensions and thereby reduces the double-counting that would otherwise arise from naively averaging indicators that are, in practice, substantially collinear. The resulting score can be interpreted as a composite measure of how close a country's institutional configuration is to the governance frontier, adjusted for the redundancy inherent in the underlying dimensions.
 
 Energy import dependency is taken from a global data perspective and used as a broad measure of energy independence. Here, “broad” means the country’s operational reliance on imported energy in the observed balance, not its full industrial or supply-chain autonomy. The series is aligned with the project country coding and integrated into the common preprocessing pipeline. In the report, it is treated on a 0--100 scale where higher values indicate greater independence after inversion. A low or zero value should therefore be read as limited net dependence in the observed energy balance, not as complete structural independence.
 
-Because the project combines heterogeneous international sources, a harmonization procedure is required before any structural analysis can be performed. The preprocessing phase is kept deliberately simple: it aligns sources, removes duplicate country-year observations, and makes each indicator comparable without changing its meaning. Variables characterized by negative structural interpretation, such as debt and energy dependency, are inverted after normalization so that larger values correspond to structurally preferable conditions. In this framework, energy dependency is treated on a 0--100 scale where 100 represents maximum independence.
+Because the project combines heterogeneous international sources, a harmonization procedure is required before any structural analysis can be performed. The preprocessing phase is kept deliberately simple: it aligns sources, removes duplicate country-year observations and makes each indicator comparable without changing its meaning. Variables characterized by negative structural interpretation, such as debt and energy dependency, are inverted after normalization so that larger values correspond to structurally preferable conditions. In this framework, energy dependency is treated on a 0--100 scale where 100 represents maximum independence.
 
 The final dataset is divided into two distinct subsets. The first subset contains the ordering variables used to construct the POSet, while the second subset contains validation variables used exclusively for shock-based evaluation. This separation aims to distinguish structural economic configuration from post-shock economic performance.
 
-The complete workflow is modular and organized into acquisition, preprocessing, POSet construction, and validation stages to ensure reproducibility and future extensibility of the framework. In practice, each stage has a narrowly defined role: acquisition gathers source data, preprocessing resolves duplicates and aligns directionality, POSet construction performs the structural ordering, and validation evaluates whether the ordering has explanatory power under shock conditions.
+The complete workflow is modular and organized into acquisition, preprocessing, POSet construction and validation stages to ensure reproducibility and future extensibility of the framework. In practice, each stage has a narrowly defined role: acquisition gathers source data, preprocessing resolves duplicates and aligns directionality, POSet construction performs the structural ordering and validation evaluates whether the ordering has explanatory power under shock conditions.
+
+% =========================================================
+\subsection{Strengths and Weaknesses of the Data}
+\label{sec:data_strengths_weaknesses}
+
+The dataset presents a specific profile of strengths and weaknesses that must be evaluated directly against the goal of constructing a structural ordering of resilience, rather than assessed in general terms.
+
+The principal strength of the data lies in its provenance. Every source employed, OECD SDMX, Eurostat and the World Bank, including the Worldwide Governance Indicators, is an official institutional source rather than a scraped, proprietary, or third-party aggregated dataset. This has two direct consequences for the goal of the study. First, it ensures that the pipeline is fully reproducible, since every variable can be retrieved again through a documented public API or bulk download, which is consistent with the project's stated emphasis on a transparent and reproducible workflow. Second, it means that any structural ordering derived from the data rests on measurement choices that are externally documented and audited by the issuing institutions themselves, rather than on definitions internal to this project.
+
+A limitation concerns the construction of the institutional robustness variable itself. The Worldwide Governance Indicators are not a primary measurement in the way that, for instance, public debt or R\&D expenditure are; they are themselves a composite built from underlying expert assessments and perception-based surveys. This means that one of the five structural variables used to construct the POSet, the variable intended to most directly represent the quality of institutions, already embeds an aggregation methodology of the kind that this project otherwise sets out to avoid at the level of the overall resilience ranking. While the correlation-aware Mahalanobis aggregation described in Section~\ref{sec:poset_construction} mitigates double-counting across the six WGI dimensions, it does not resolve this underlying dependence on a composite source and this should be acknowledged as a constraint inherited from the available data rather than a limitation introduced by the project's own methodology.
+
+
 
 %=========================================================
 \subsection{Ordering Variables}
@@ -260,7 +276,7 @@ Tertiary education       & Human capital adaptability & $\uparrow$ \\
 
 The directional vectors ($\uparrow$ and $\downarrow$) dictate the partial ordering logic. An upward arrow ($\uparrow$) signifies an asset where higher values represent structural superiority, whereas a downward arrow ($\downarrow$) denotes a liability or structural friction. In the Hasse diagram algebra, country $A$ dominates country $B$ if and only if country $A$ performs better than or equal to country $B$ across all five dimensions simultaneously. 
 
-Research and Development (R\&D) expenditure and tertiary education track the technological and human capital frontier, determining an economy's capacity to reallocate resources dynamically during a crisis. The Worldwide Governance Indicators provide a composite measure of institutional quality, rule of law, and regulatory control, which directly influence policy execution speed under stress. Conversely, high ratios of public debt and energy import dependency operate as severe structural constraints. Public debt restricts fiscal maneuvering space when counter-cyclical spending is required, while energy dependency exposes the domestic production function to external supply-side geopolitical shocks. For this reason, the public-debt series is treated as a priority merge of authoritative sources rather than as an independently re-estimated variable.
+Research and Development (R\&D) expenditure and tertiary education track the technological and human capital frontier, determining an economy's capacity to reallocate resources dynamically during a crisis. The Worldwide Governance Indicators provide a composite measure of institutional quality, rule of law and regulatory control, which directly influence policy execution speed under stress. Conversely, high ratios of public debt and energy import dependency operate as severe structural constraints. Public debt restricts fiscal maneuvering space when counter-cyclical spending is required, while energy dependency exposes the domestic production function to external supply-side geopolitical shocks. For this reason, the public-debt series is treated as a priority merge of authoritative sources rather than as an independently re-estimated variable.
 % =========================================================
 \subsection{Validation Variables}
 % =========================================================
@@ -307,9 +323,18 @@ To consolidate disparate data sources into a unified analytical environment, the
 
 In handling incomplete data, the framework prioritizes empirical integrity over sample size. Rather than synthesizing missing values through temporal interpolation—which risks introducing artificial continuity and masking genuine structural gaps, the methodology enforces strict exclusion criteria. Any country exhibiting a high density of missing observations across the required structural variables is removed entirely from the analysis. By eliminating incomplete profiles rather than statistically approximating them, the framework prevents artificial data from corrupting the partial order. This filtering is a deliberate design choice: the aim is not to maximize the number of observations at any cost, but to preserve a reliable structural comparison.
 
-Furthermore, variables characterized by a negative structural interpretation, such as unemployment, public debt, or energy dependency, are directionally inverted after normalization. This transformation ensures that larger values consistently represent structurally preferable conditions, and that energy dependency is read as a scale of independence rather than vulnerability. Duplicate public-debt observations are resolved by source priority, with Eurostat preferred over World Bank when both are available, so that the same country-year pair is not counted twice.
+Furthermore, variables characterized by a negative structural interpretation, such as unemployment, public debt, or energy dependency, are directionally inverted after normalization. This transformation ensures that larger values consistently represent structurally preferable conditions and that energy dependency is read as a scale of independence rather than vulnerability. Duplicate public-debt observations are resolved by source priority, with Eurostat preferred over World Bank when both are available, so that the same country-year pair is not counted twice.
 
 Finally, continuous variables are subjected to normalization to neutralize unit variances across highly diverse metrics. To accommodate the heavy-tailed distributions and extreme outliers common in international macroeconomic data, robust scaling techniques (such as those based on the median and interquartile range) are prioritized over classical z-score standardization, ensuring that the structural distances between the countries remain stable and interpretable rather than distorted by scale.
+
+% =========================================================
+\subsection{Tools}
+\label{sec:tools}
+
+The entire pipeline is implemented in Python, chosen for the data-handling and statistical libraries and its direct compatibility with the SDMX-based APIs used by OECD and Eurostat. Data acquisition relies on \texttt{requests} and \texttt{dbnomics} to retrieve series directly from their respective sources, while \texttt{pycountry} provides a standardized country-code mapping, which the merge step requires in order to align datasets that natively use different national coding conventions. \texttt{pandas} and \texttt{numpy} handle the resulting country-year panel throughout preprocessing. \texttt{scikit-learn}'s \texttt{RobustScaler} is used for normalization, since the question requires comparing countries on a common scale without a small number of extreme values, such as a debt spike during a crisis year, distorting that comparison. \texttt{networkx} is used to construct the dominance graph and perform transitive reduction, since identifying genuine direct dominance relationships, as opposed to redundant indirect paths, is precisely what the question about structural comparability requires. Finally, \texttt{scipy.stats} provides the Spearman rank correlation and Kruskal-Wallis test used in the validation stage, both of which are standard non-parametric procedures suited to the ordinal, non-interval nature of the POSet levels.
+All the code procedures can be found in the references \cite{GitHub Code}.
+
+
 % =========================================================
 % SECTION 4 — POSET CONSTRUCTION
 % =========================================================
@@ -317,7 +342,7 @@ Finally, continuous variables are subjected to normalization to neutralize unit 
 \section{Partial Order Formulation and Structural Profiles}
 \label{sec:poset_construction}
 
-The construction of the Partially Ordered Set (POSet) begins with a deliberate selection of socio-economic dimensions. Rather than evaluating cyclical performance, the structural hierarchy relies exclusively on five slow-moving macroeconomic variables: Research and Development expenditure, Worldwide Governance Indicators, Public debt, Energy import dependency, and Tertiary education. The logical premise is that these specific indicators establish the underlying capacity of a socio-economic system to absorb and adapt to external stress long before a crisis actually occurs.
+The construction of the Partially Ordered Set (POSet) \cite{Posets} begins with a deliberate selection of socio-economic dimensions. Rather than evaluating cyclical performance, the structural hierarchy relies exclusively on five slow-moving macroeconomic variables: Research and Development expenditure, Worldwide Governance Indicators, Public debt, Energy import dependency and Tertiary education. The logical premise is that these specific indicators establish the underlying capacity of a socio-economic system to absorb and adapt to external stress long before a crisis actually occurs.
 
 To construct a coherent mathematical space, these dimensions must share a uniform directional logic. A continuous direction-alignment process is applied to guarantee that higher values systematically map onto greater socio-economic advantages. All five vectors are normalized into a continuous $[0, 1]$ interval via Min-Max scaling. This strictly bounds the empirical frontier of the sample to unity and the baseline limit to zero, neutralizing unit variances and allowing percentages to be evaluated alongside institutional indices.
 
@@ -394,7 +419,7 @@ Figure~\ref{fig:hasse_gfc} and Figure~\ref{fig:hasse_covid} display the transiti
 \label{fig:hasse_covid}
 \end{figure}
 
-These results show that the POSet does not merely rank countries from best to worst. Instead, it separates countries into structurally comparable and structurally incomparable configurations. This is particularly important for resilience analysis, because different economies may reach high structural positions through different combinations of fiscal capacity, governance quality, human capital, innovation, and energy security.
+These results show that the POSet does not merely rank countries from best to worst. Instead, it separates countries into structurally comparable and structurally incomparable configurations. This is particularly important for resilience analysis, because different economies may reach high structural positions through different combinations of fiscal capacity, governance quality, human capital, innovation and energy security.
 
 \subsection{Robustness of the Partial Order}
 \label{sec:poset_robustness}
@@ -423,7 +448,7 @@ Interpretation & Stable & Stable \\
 \end{tabular}
 \end{table}
 
-Figure~\ref{fig:epsilon_robustness} summarizes the evolution of the number of dominance relations, incomparable pairs, and Pareto-frontier profiles across the tested epsilon margins. While the number of direct dominance relations may change slightly as the threshold becomes stricter, the stable frontier membership indicates that the central structural conclusions do not depend on very small numerical differences.
+Figure~\ref{fig:epsilon_robustness} summarizes the evolution of the number of dominance relations, incomparable pairs and Pareto-frontier profiles across the tested epsilon margins. While the number of direct dominance relations may change slightly as the threshold becomes stricter, the stable frontier membership indicates that the central structural conclusions do not depend on very small numerical differences.
 
 \begin{figure}[H]
 \centering
@@ -461,7 +486,7 @@ Furthermore, the aggregation of diverse crisis episodes may mask heterogeneity i
 \subsection{Shock Validation Results}
 
 
-The shock validation procedure was conducted by comparing the structural position of each country within the POSet hierarchy against its observed economic performance during the selected crisis period. For each country, resilience outcomes were evaluated using the validation variables defined previously, including GDP contraction, unemployment variation, inflation dynamics, productivity variation, recovery time, and volatility-related indicators. These measures were aggregated into a resilience score designed to capture the overall ability of an economy to absorb, adapt to, and recover from systemic disruption.
+The shock validation procedure was conducted by comparing the structural position of each country within the POSet hierarchy against its observed economic performance during the selected crisis period. For each country, resilience outcomes were evaluated using the validation variables defined previously, including GDP contraction, unemployment variation, inflation dynamics, productivity variation, recovery time and volatility-related indicators. These measures were aggregated into a resilience score designed to capture the overall ability of an economy to absorb, adapt to and recover from systemic disruption.
 
 The empirical results indicate that countries occupying structurally stronger positions within the POSet generally exhibited more favorable resilience outcomes during the shock period. Specifically, countries located in the dominant structural tiers recorded an average resilience score of **[INSERT VALUE]**, compared with **[INSERT VALUE]** for countries belonging to the lower tiers. This difference suggests that the structural variables used to construct the ordering contain meaningful information regarding a country's capacity to withstand adverse economic conditions.
 
@@ -501,13 +526,13 @@ the project investigates:
 
 This project developed a POSet-based framework for comparing economic structural resilience across OECD countries without reducing heterogeneous economic indicators into a single weighted composite index. By using Partial Order Theory, the analysis preserves the multidimensional nature of resilience and explicitly represents structural incomparability between countries.
 
-The empirical POSet results demonstrate that OECD economies cannot be adequately represented through a simple linear ranking. Instead, countries form distinct structural profiles based on different combinations of innovation capacity, institutional robustness, fiscal space, energy independence, and human capital. The high incomparability ratios observed in both the 2007 and 2019 baseline structures confirm that resilience can emerge through alternative structural configurations rather than through one universally dominant development model.
+The empirical POSet results demonstrate that OECD economies cannot be adequately represented through a simple linear ranking. Instead, countries form distinct structural profiles based on different combinations of innovation capacity, institutional robustness, fiscal space, energy independence and human capital. The high incomparability ratios observed in both the 2007 and 2019 baseline structures confirm that resilience can emerge through alternative structural configurations rather than through one universally dominant development model.
 
 The robustness analysis further supports this conclusion. The epsilon-margin procedure produced no reciprocal dominance cycles and showed stable Pareto-frontier membership across the tested margin range. This indicates that the main structural findings are not driven by negligible numerical differences or by an arbitrary dominance threshold.
 
 The shock validation stage evaluates whether these ex-ante structural positions are associated with observed macroeconomic resilience during the Global Financial Crisis and the COVID-19 crisis. The final results indicate [INSERT FINAL VALIDATION INTERPRETATION: whether structurally stronger POSet positions were associated with better resilience outcomes]. Therefore, the POSet framework should be interpreted not as a direct crisis-prediction model, but as a transparent analytical tool for identifying structural configurations that may support stronger adaptation under systemic stress.
 
-Overall, the project contributes a non-compensatory and interpretable framework for economic resilience analysis. It avoids arbitrary weighting schemes, avoids forced linear rankings, separates structural conditions from crisis outcomes, and recognizes that countries may follow multiple structurally valid paths toward resilience.
+Overall, the project contributes a non-compensatory and interpretable framework for economic resilience analysis. It avoids arbitrary weighting schemes, avoids forced linear rankings, separates structural conditions from crisis outcomes and recognizes that countries may follow multiple structurally valid paths toward resilience.
 
 Future developments may include:
 \begin{itemize}
