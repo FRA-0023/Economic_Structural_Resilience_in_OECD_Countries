@@ -1,0 +1,53 @@
+\subsection{Empirical POSet Results}
+\label{sec:poset_results}
+
+The empirical POSet was constructed using the final cleaned structural dataset covering the period [INSERT PERIOD]. After applying the missing-data exclusion criteria, the final ordering sample contained [INSERT NUMBER] countries and [INSERT NUMBER] country-year observations. The five ordering dimensions were normalized and directionally aligned before the dominance relations were computed.
+
+The resulting POSet produced [INSERT NUMBER] unique structural profiles. Among these, [INSERT NUMBER] profiles were classified as dominant or near-dominant states, [INSERT NUMBER] profiles occupied intermediate positions, and [INSERT NUMBER] profiles were located in structurally weaker regions of the ordering. This confirms that the framework does not collapse countries into a single linear ranking, but instead identifies several distinct structural configurations.
+
+\begin{table}[H]
+\centering
+\caption{Summary of Empirical POSet Structure}
+\small
+\begin{tabular}{l c}
+\toprule
+\textbf{POSet Component} & \textbf{Value} \\
+\midrule
+Countries included & [INSERT VALUE] \\
+Country-year observations & [INSERT VALUE] \\
+Unique structural profiles & [INSERT VALUE] \\
+Dominance relations & [INSERT VALUE] \\
+Incomparable pairs & [INSERT VALUE] \\
+Minimal profiles & [INSERT VALUE] \\
+Maximal profiles & [INSERT VALUE] \\
+Selected epsilon value & [INSERT VALUE] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:hasse_diagram} presents the reduced Hasse diagram generated from the dominance matrix. The graph shows that several countries occupy comparable hierarchical positions, while others remain structurally incomparable. This incomparability is substantively meaningful: it indicates that some economies achieve resilience through different combinations of institutional quality, innovation capacity, fiscal space, human capital, and energy independence.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{[INSERT_HASSE_DIAGRAM_FILENAME]}
+\caption{Reduced Hasse diagram of the empirical POSet.}
+\label{fig:hasse_diagram}
+\end{figure}
+
+The countries located in the upper structural region of the POSet include [INSERT COUNTRIES], while the lower region contains [INSERT COUNTRIES]. Intermediate and incomparable countries include [INSERT COUNTRIES]. These results suggest that structural resilience is not determined by one dominant indicator alone, but by the joint configuration of the five selected dimensions.
+
+\begin{table}[H]
+\centering
+\caption{Representative Country Profiles by POSet Region}
+\small
+\begin{tabular}{l l l}
+\toprule
+\textbf{POSet Region} & \textbf{Countries} & \textbf{Interpretation} \\
+\midrule
+Dominant / robust & [INSERT COUNTRIES] & Strong structural configuration \\
+Intermediate & [INSERT COUNTRIES] & Mixed structural profile \\
+Vulnerable & [INSERT COUNTRIES] & Weak structural configuration \\
+Incomparable & [INSERT COUNTRIES] & Alternative development paths \\
+\bottomrule
+\end{tabular}
+\end{table}
