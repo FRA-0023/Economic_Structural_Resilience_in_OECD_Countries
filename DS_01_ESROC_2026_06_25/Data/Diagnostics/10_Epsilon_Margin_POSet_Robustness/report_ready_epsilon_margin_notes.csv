@@ -1,0 +1,6 @@
+topic,report_text
+Epsilon-margin rule,The epsilon-margin robustness rule requires country A to be at least as strong as country B in all five normalized dimensions and better by more than epsilon in at least one dimension.
+Epsilon value and grid,"The robustness grid tests epsilon-margin values of 0.00, 0.05, 0.10, 0.15, and 0.20 on the 0–1 normalized score scale. Epsilon = 0.10 is retained as a moderate reference value, equivalent to requiring at least one 10-percentage-point advantage."
+Why epsilon-margin,"Compared with epsilon-tolerance, epsilon-margin is more conservative because it does not relax the requirement that A must be at least as good as B in every dimension. It only raises the minimum advantage needed to record dominance."
+Relationship to main POSet,"The epsilon-margin analysis is a robustness check. The main empirical structure remains the five-level profile POSet, while epsilon-margin is used to examine how sensitive dominance and frontier membership are to requiring a minimum advantage."
+Validity check,"Each epsilon-margin relation is checked for reciprocal dominance and cycles. Unlike tolerance-based dominance, the margin rule should remain a valid partial order because it is a stricter subset of standard componentwise dominance."

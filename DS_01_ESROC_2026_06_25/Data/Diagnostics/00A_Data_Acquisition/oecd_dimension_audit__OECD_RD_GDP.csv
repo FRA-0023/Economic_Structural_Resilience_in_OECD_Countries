@@ -1,0 +1,33 @@
+dataset_label,column,unique_count_raw,sample_values_raw
+OECD_RD_GDP,STRUCTURE,1,DATAFLOW
+OECD_RD_GDP,STRUCTURE_ID,1,OECD.STI.STP:DSD_MSTI@DF_MSTI(1.3)
+OECD_RD_GDP,STRUCTURE_NAME,1,Main Science and Technology Indicators (MSTI database)
+OECD_RD_GDP,ACTION,1,I
+OECD_RD_GDP,Reference area,49,Argentina; Australia; Austria; Belgium; Bulgaria; Canada; Chile; China (People’s Republic of); Chinese Taipei; Colombia; Costa Rica; Croatia; Czechia; Denmark; Estonia; European Union (27 countries from 01/02/2020); Finland; France; Germany; Greece; Hungary; Iceland; Ireland; Israel; Italy; Japan; Korea; Latvia; Lithuania; Luxembourg; Mexico; Netherlands; New Zealand; Norway; OECD; Poland; Portugal; Romania; Russia; Singapore; Slovak Republic; Slovenia; South Africa; Spain; Sweden; Switzerland; Türkiye; United Kingdom; United States
+OECD_RD_GDP,FREQ,1,A
+OECD_RD_GDP,Frequency of observation,1,Annual
+OECD_RD_GDP,MEASURE,62,B; B_AERO; B_COMP; B_DRUG; B_FA; B_FB; B_FG; B_FON; B_ICTS; B_MANUF; B_RS; B_SERV; B_TT; B_WRS; C; C_CV; C_DF; C_ECO; C_EDU; C_GUF; C_HEA; C_NOR; C_SPA; G; GDP; GV; GV_FB; G_BR; G_CV; G_FA; G_FB; G_FG; G_FON; G_RS; G_TT; G_WRS; H; H_FB; H_RS; H_TT; H_WRS; PI; PNP; PPP; P_BIOPCT; P_ICTPCT; P_PCT; P_TRIAD; TD_BAERO; TD_BCOMP; TD_BDRUG; TD_EAERO; TD_ECOMP; TD_EDRUG; TD_IAERO; TD_ICOMP; TD_IDRUG; TOT_EMP; TOT_POP; T_RS; T_TT; T_WRS
+OECD_RD_GDP,Measure,62,"BERD financed by government; BERD financed by the Higher Education and PNP sectors; BERD financed by the business sector; BERD financed by the rest of the world; BERD performed in information and communication services; BERD performed in service industries; BERD performed in the aerospace industry; BERD performed in the computer, electronic and optical industry; BERD performed in the manufacturing industry; BERD performed in the pharmaceutical industry; Basic research expenditure; Business Enterprise Expenditure on R&D (BERD); Business Enterprise R&D personnel; Business enterprise sector researchers; Business enterprise sector woman researchers; Civil Budget R&D; Civil GBARD for Economic Development programmes; Civil GBARD for Education and Social programmes; Civil GBARD for General University Funds (GUF); Civil GBARD for Health and Environment programmes; Civil GBARD for Non-oriented Research programmes; Civil GBARD for Space programmes; Civil GERD; Defence Budget R&D; Exports of air and spacecraft; Exports of computer, electronic and optical products; Exports of pharmaceutical products; GERD financed by government; GERD financed by the Higher Education and PNP sectors; GERD financed by the business enterprise sector; GERD financed by the rest of the world; GOVERD financed by the business sector; Government Allocations for R&D (GBARD); Government Intramural Expenditure on R&D (GOVERD); Government R&D personnel; Government sector researchers; Government sector woman researchers; Gross Domestic Expenditure on R&D (GERD); Gross domestic product; HERD financed by the business sector; Higher Education Expenditure on R&D (HERD); Higher Education R&D personnel; Higher education sector researchers; Higher education sector woman researchers; Implicit GDP price indices; Imports of air and spacecraft; Imports of computer, electronic and optical products; Imports of pharmaceutical products; Population; Private non-profit expenditure on R&D (PNPERD); Purchasing power parity; R&D personnel; Researchers; Total employment; Trade balance of air and spacecraft; Trade balance of computer, electronic and optical products; Trade balance of pharmaceutical products; Triadic patent families; Woman researchers; patent applications filed under the PCT; patents in the ICT sector - applications filed under the PCT; patents in the biotechnology sector - applications filed under the PCT"
+OECD_RD_GDP,UNIT_MEASURE,21,10P3EMP; FTE; IX; PATN; PS; PT_B1GQ; PT_BERD; PT_GBARD; PT_GBARD_C; PT_GERD; PT_GOVERD; PT_HERD; PT_P6_W; PT_PATN_FM_T; PT_PRSNL_RD; PT_RSH; USD; USD_PPP; USD_PPP_PS; XDC; XDC_USD
+OECD_RD_GDP,Unit of measure,21,"Full time equivalent unit; Index; National currency; National currency per US dollar; Patents; Per 1 000 employment; Percentage of GDP; Percentage of R&D personnel; Percentage of business enterprise expenditure on R&D; Percentage of civil government allocations for R&D; Percentage of government allocations for R&D; Percentage of government intramural expenditure on R&D; Percentage of gross domestic expenditure on R&D; Percentage of higher education expenditure on R&D; Percentage of researchers; Percentage of world exports; Percentage of world triadic patent families; Persons; US dollar; US dollars per person, PPP converted; US dollars, PPP converted"
+OECD_RD_GDP,PRICE_BASE,3,Q; V; _Z
+OECD_RD_GDP,Price base,3,Constant prices; Current prices; Not applicable
+OECD_RD_GDP,TRANSFORMATION,3,GY; IX; _Z
+OECD_RD_GDP,Transformation,3,"Growth rate, over 1 year; Index; Not applicable"
+OECD_RD_GDP,Time period,0,
+OECD_RD_GDP,Observation value,0,
+OECD_RD_GDP,Observation status,6,Data included in another category; Definition differs; Estimated value; Includes data from another category; Provisional value; Time series break
+OECD_RD_GDP,OBS_STATUS_2,4,D; E; P; W
+OECD_RD_GDP,Observation status 2,4,Definition differs; Estimated value; Includes data from another category; Provisional value
+OECD_RD_GDP,OBS_STATUS_3,3,E; P; W
+OECD_RD_GDP,Observation status 3,3,Estimated value; Includes data from another category; Provisional value
+OECD_RD_GDP,AUX_OBS_STATUS,4,L2; M2; S2; V2
+OECD_RD_GDP,Aux observation status,4,Overestimated or based on overestimated data; The sum of the breakdown does not add to the total; Underestimated or based on underestimated data; Unrevised breakdown not adding to the revised total
+OECD_RD_GDP,CONF_STATUS,1,C
+OECD_RD_GDP,Confidentiality status,1,Confidential statistical information
+OECD_RD_GDP,UNIT_MULT,3,0; 3; 6
+OECD_RD_GDP,Unit multiplier,3,Millions; Thousands; Units
+OECD_RD_GDP,BASE_PER,2,2007.0; 2020.0
+OECD_RD_GDP,Base year,0,
+OECD_RD_GDP,DECIMALS,4,0; 1; 2; 3
+OECD_RD_GDP,Decimals,4,One; Three; Two; Zero

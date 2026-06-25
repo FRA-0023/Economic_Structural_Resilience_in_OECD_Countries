@@ -1,0 +1,4 @@
+decision,choice,reason,risk_controlled
+Test epsilon-margin robustness,epsilon-margin grid 0.00 to 0.20,Assesses whether dominance/frontier results depend on tiny differences in normalized scores.,Makes the epsilon-margin value and sensitivity analysis explicit.
+Use epsilon = 0.10 as reference robustness value,0.10 on 0–1 normalized scale,Moderate threshold requiring at least one 10-percentage-point advantage.,Avoids arbitrary unstated epsilon choice.
+Keep epsilon-margin outside main result,robustness/sensitivity only,Main report structure is based on the interpretable 5-level profile POSet.,Avoids replacing the main ordinal POSet with multiple competing country-level relations.

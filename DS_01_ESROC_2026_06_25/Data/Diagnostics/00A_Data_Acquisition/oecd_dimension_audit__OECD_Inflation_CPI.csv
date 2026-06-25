@@ -1,0 +1,31 @@
+dataset_label,column,unique_count_raw,sample_values_raw
+OECD_Inflation_CPI,STRUCTURE,1,DATAFLOW
+OECD_Inflation_CPI,STRUCTURE_ID,1,OECD.SDD.TPS:DSD_PRICES@DF_PRICES_ALL(1.0)
+OECD_Inflation_CPI,STRUCTURE_NAME,1,"Consumer price indices (CPIs, HICPs), COICOP 1999"
+OECD_Inflation_CPI,ACTION,1,I
+OECD_Inflation_CPI,Reference area,54,Argentina; Australia; Austria; Belgium; Brazil; Bulgaria; Canada; Chile; China (People’s Republic of); Colombia; Costa Rica; Croatia; Czechia; Denmark; Estonia; Euro area (20 countries); European Union (27 countries from 01/02/2020); Finland; France; G20; G7; Germany; Greece; Hungary; Iceland; India; Indonesia; Ireland; Israel; Italy; Japan; Korea; Latvia; Lithuania; Luxembourg; Mexico; Netherlands; New Zealand; Norway; OECD; OECD Europe; Poland; Portugal; Russia; Saudi Arabia; Slovak Republic; Slovenia; South Africa; Spain; Sweden; Switzerland; Türkiye; United Kingdom; United States
+OECD_Inflation_CPI,FREQ,1,A
+OECD_Inflation_CPI,Frequency of observation,1,Annual
+OECD_Inflation_CPI,METHODOLOGY,1,N
+OECD_Inflation_CPI,Methodology,1,National
+OECD_Inflation_CPI,MEASURE,1,CPI
+OECD_Inflation_CPI,Measure,1,Consumer price index
+OECD_Inflation_CPI,UNIT_MEASURE,1,PA
+OECD_Inflation_CPI,Unit of measure,1,Percent per annum
+OECD_Inflation_CPI,EXPENDITURE,1,_T
+OECD_Inflation_CPI,Expenditure,1,Total
+OECD_Inflation_CPI,ADJUSTMENT,1,N
+OECD_Inflation_CPI,Adjustment,1,Neither seasonally adjusted nor calendar adjusted
+OECD_Inflation_CPI,TRANSFORMATION,1,GY
+OECD_Inflation_CPI,Transformation,1,"Growth rate, over 1 year"
+OECD_Inflation_CPI,Time period,0,
+OECD_Inflation_CPI,Observation value,0,
+OECD_Inflation_CPI,Observation status,3,Low reliability; Normal value; Time series break
+OECD_Inflation_CPI,UNIT_MULT,0,
+OECD_Inflation_CPI,Unit multiplier,0,
+OECD_Inflation_CPI,BASE_PER,0,
+OECD_Inflation_CPI,Base period,0,
+OECD_Inflation_CPI,DURABILITY,0,
+OECD_Inflation_CPI,Durability,0,
+OECD_Inflation_CPI,DECIMALS,1,2
+OECD_Inflation_CPI,Decimals,1,Two

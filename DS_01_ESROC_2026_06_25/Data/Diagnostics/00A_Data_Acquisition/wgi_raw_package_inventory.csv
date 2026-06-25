@@ -1,0 +1,2 @@
+dataset_label,file_name,exists,zip_size_bytes,raw_folder,note
+WGI_Governance_Raw,WGI_CSV.zip,True,3661035,D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Raw\Raw_Files\WGI_2025_Raw,Raw WGI package downloaded and extracted if WGI acquisition succeeded. Not parsed in 00A.

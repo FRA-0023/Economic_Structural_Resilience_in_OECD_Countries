@@ -1,0 +1,13 @@
+output_path,exists,size_kb
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\standardized_country_year_variable_long.csv,True,2754.02
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\standardized_all_variables_long.csv,True,2754.02
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\approved_raw_file_registry.csv,True,1.62
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\csv_standardization_diagnostics.csv,True,2.88
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\standardized_variable_inventory.csv,True,1.64
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\value_range_sanity_checks.csv,True,1.96
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\country_variable_presence_matrix.csv,True,5.96
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\country_variable_year_count_matrix.csv,True,5.67
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\baseline_year_final5_input_check.csv,True,8.68
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\baseline_year_final5_summary.csv,True,0.15
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Processed\Comparable_Raw_Files\variable_metadata.csv,True,2.59
+D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Audit\01_Make_Raw_Files_Comparable_Audit.xlsx,True,105.39

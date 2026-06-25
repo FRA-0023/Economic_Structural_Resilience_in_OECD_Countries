@@ -1,0 +1,47 @@
+dataset_label,column,unique_count_raw,sample_values_raw
+OECD_Tertiary_Education,STRUCTURE,1,DATAFLOW
+OECD_Tertiary_Education,STRUCTURE_ID,1,OECD.EDU.IMEP:DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA(1.0)
+OECD_Tertiary_Education,STRUCTURE_NAME,1,"Adults' educational attainment distribution, by age group and gender"
+OECD_Tertiary_Education,ACTION,1,I
+OECD_Tertiary_Education,Reference area,51,Argentina; Australia; Austria; Belgium; Brazil; Bulgaria; Canada; Chile; China (People’s Republic of); Colombia; Costa Rica; Croatia; Czechia; Denmark; Estonia; European Union (25 countries); Finland; France; G20; Germany; Greece; Hungary; Iceland; India; Indonesia; Ireland; Israel; Italy; Japan; Korea; Latvia; Lithuania; Luxembourg; Mexico; Netherlands; New Zealand; Norway; OECD; Peru; Poland; Portugal; Romania; Slovak Republic; Slovenia; South Africa; Spain; Sweden; Switzerland; Türkiye; United Kingdom; United States
+OECD_Tertiary_Education,SEX,1,_T
+OECD_Tertiary_Education,Sex,1,Total
+OECD_Tertiary_Education,AGE,1,Y25T64
+OECD_Tertiary_Education,Age,1,From 25 to 64 years
+OECD_Tertiary_Education,ATTAINMENT_LEV,1,ISCED11A_5T8
+OECD_Tertiary_Education,Educational attainment level,1,Tertiary education
+OECD_Tertiary_Education,EDUCATION_FIELD,1,_T
+OECD_Tertiary_Education,Field of education,1,Total
+OECD_Tertiary_Education,MEASURE,1,POP
+OECD_Tertiary_Education,Measure,1,Population
+OECD_Tertiary_Education,INCOME,1,_Z
+OECD_Tertiary_Education,Income,1,Not applicable
+OECD_Tertiary_Education,BIRTH_PLACE,1,_T
+OECD_Tertiary_Education,Place of birth,1,Total
+OECD_Tertiary_Education,MIGRATION_AGE,1,_Z
+OECD_Tertiary_Education,Age at migration,1,Not applicable
+OECD_Tertiary_Education,EDU_STATUS,1,ED_NED
+OECD_Tertiary_Education,Education status,1,In education or not in education
+OECD_Tertiary_Education,LABOUR_FORCE_STATUS,1,POP
+OECD_Tertiary_Education,Labour force status,1,Population
+OECD_Tertiary_Education,DURATION_UNEMP,1,_Z
+OECD_Tertiary_Education,Unemployment duration,1,Not applicable
+OECD_Tertiary_Education,UNIT_MEASURE,1,PT_POP_SEX_AGE
+OECD_Tertiary_Education,Unit of measure,1,Percentage of population in the same sex and age
+OECD_Tertiary_Education,STATISTICAL_OPERATION,1,OBS
+OECD_Tertiary_Education,Statistical operation,1,Observed
+OECD_Tertiary_Education,WORK_TIME_ARNGMNT,1,_Z
+OECD_Tertiary_Education,Work time arrangement,1,Not applicable
+OECD_Tertiary_Education,QUESTIONNAIRE,1,NEAC
+OECD_Tertiary_Education,Questionnaire name,1,LSO-NEAC regular data collection
+OECD_Tertiary_Education,FREQ,1,A
+OECD_Tertiary_Education,Frequency of observation,1,Annual
+OECD_Tertiary_Education,Time period,0,
+OECD_Tertiary_Education,Observation value,0,
+OECD_Tertiary_Education,Observation status,4,Includes data from another category; Missing value; Normal value; Time series break
+OECD_Tertiary_Education,CONF_STATUS,0,
+OECD_Tertiary_Education,Confidentiality status,0,
+OECD_Tertiary_Education,UNIT_MULT,1,0
+OECD_Tertiary_Education,Unit multiplier,1,Units
+OECD_Tertiary_Education,DECIMALS,1,1
+OECD_Tertiary_Education,Decimals,1,One

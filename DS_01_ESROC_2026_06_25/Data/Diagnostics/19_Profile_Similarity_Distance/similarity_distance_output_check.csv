@@ -1,0 +1,9 @@
+file_name,processed_exists,diagnostics_exists,tables_exists
+country_profile_distance_long.csv,True,True,True
+nearest_neighbours_top5.csv,True,True,True
+country_profile_extreme_pairs.csv,True,True,True
+distance_summary_by_shock.csv,True,True,True
+profile_distance_mds_coordinates.csv,True,True,True
+report_ready_similarity_distance_notes.csv,True,True,True
+methodological_decision_similarity_distance.csv,True,True,True
+profile_similarity_distance_run_summary.csv,True,True,True

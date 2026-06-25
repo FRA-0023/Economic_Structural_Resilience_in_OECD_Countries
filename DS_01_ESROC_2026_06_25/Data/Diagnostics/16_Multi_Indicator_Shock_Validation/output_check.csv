@@ -1,0 +1,13 @@
+file_name,processed_exists,diagnostics_exists,tables_exists
+multi_indicator_resolved_variables.csv,True,True,True
+multi_indicator_validation_country_level.csv,True,True,True
+frontier_vs_nonfrontier_multi_indicator_validation.csv,True,True,True
+layer_multi_indicator_validation_summary.csv,True,True,True
+layer_multi_indicator_trend_summary.csv,True,True,True
+multi_indicator_validation_takeaways.csv,True,True,True
+validation_evidence_matrix.csv,True,True,True
+multi_indicator_validation_synthesis.csv,True,True,True
+multi_indicator_validation_mismatch_cases.csv,True,True,True
+report_ready_multi_indicator_validation_paragraphs.csv,True,True,True
+methodological_decision_updates_multi_indicator_validation.csv,True,True,True
+multi_indicator_validation_run_summary.csv,True,True,True

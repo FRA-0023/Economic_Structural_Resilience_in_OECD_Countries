@@ -1,0 +1,7 @@
+shock_id,levels,countries,variables,unique_profiles,profile_uniqueness_ratio,max_countries_per_profile,mean_countries_per_level_bin,is_main_choice,interpretation,variable_set,sensitivity_type,main_result_flag
+2007,3,25,5,22,0.88,2,8.333333333333334,False,Sensitivity/diagnostic alternative.,baseline_5_variables,discretization_levels,False
+2007,4,25,5,25,1.0,1,6.25,False,Sensitivity/diagnostic alternative.,baseline_5_variables,discretization_levels,False
+2007,5,25,5,25,1.0,1,5.0,True,Main choice: five levels preserve ordinal detail while remaining interpretable.,baseline_5_variables,discretization_levels,True
+2019,3,35,5,28,0.8,2,11.666666666666666,False,Sensitivity/diagnostic alternative.,baseline_5_variables,discretization_levels,False
+2019,4,35,5,35,1.0,1,8.75,False,Sensitivity/diagnostic alternative.,baseline_5_variables,discretization_levels,False
+2019,5,35,5,34,0.9714285714285714,2,7.0,True,Main choice: five levels preserve ordinal detail while remaining interpretable.,baseline_5_variables,discretization_levels,True

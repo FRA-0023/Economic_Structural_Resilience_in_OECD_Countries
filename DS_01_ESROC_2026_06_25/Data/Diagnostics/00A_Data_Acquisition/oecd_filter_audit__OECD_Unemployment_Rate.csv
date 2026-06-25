@@ -1,0 +1,5 @@
+dataset_label,column,expected_value,rows_before,rows_after
+OECD_Unemployment_Rate,MEASURE,UNE_RATE,332574,109755
+OECD_Unemployment_Rate,UNIT_MEASURE,PT_LF_SUB,109755,109755
+OECD_Unemployment_Rate,SEX,_T,109755,36642
+OECD_Unemployment_Rate,AGE,_T,36642,1338

@@ -1,0 +1,2 @@
+dataset_label,source_route,series_pattern,country_filter,rows_saved,countries,min_year,max_year,min_value,median_value,max_value
+OECD_GDP_Growth,DBNOMICS_OECD_MIRROR,A.*.B1GQ_R_GR.PC.NAAG_I,none_all_available_series,1115,47,2002,2025,-16.0400195313042,2.46085796805583,24.62398557014

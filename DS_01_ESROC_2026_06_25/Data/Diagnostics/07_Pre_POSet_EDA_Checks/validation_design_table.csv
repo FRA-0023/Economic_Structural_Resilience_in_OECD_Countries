@@ -1,0 +1,7 @@
+validation_component,variable_or_output,how_used,why_included,leakage_control
+GDP recovery time,"Recovery_2007, Recovery_2019","Compare recovery years across Pareto/frontier status, POSet layers, and structural profile groups.",Direct outcome-style measure of return to pre-shock GDP level.,Not used as an ordering variable.
+GDP growth path,country_recovery_index_paths_dynamic_baseline,Interpret country-specific recovery trajectories and mismatches.,"Shows whether recovery is fast, slow, or incomplete after shock.",Computed after structural baseline; not included in POSet scoring.
+Unemployment,unemployment_rate,Macro validation dimension for labour-market stress/recovery.,Employment is a central socio-economic resilience outcome and capacity proxy.,Baseline unemployment contributes to employment strength; post-shock unemployment is only validation.
+Inflation,inflation_cpi,Macro validation dimension for price stability after shock.,Inflation captures macroeconomic stress not captured by GDP recovery alone.,Not used in final POSet ordering.
+Public debt,public_debt_gdp_canonical,Contextual validation of fiscal stress after shocks.,Debt evolution helps interpret fiscal resilience and policy space.,Only baseline debt is used for ordering; post-shock debt is validation/context.
+Productivity,productivity_gdp_per_hour,Macro validation dimension for productive capacity after shock.,Productivity captures structural economic performance beyond short-term GDP growth.,Not used in final POSet ordering.

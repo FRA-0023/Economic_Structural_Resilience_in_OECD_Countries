@@ -1,0 +1,10 @@
+dataset_label,file_name,exists,rows,columns,countries,min_year,max_year
+OECD_RD_GDP_2002_2025,OECD_RD_GDP_2002_2025.csv,True,1044,3,49,2002,2025
+OECD_Inflation_CPI_2002_2025,OECD_Inflation_CPI_2002_2025.csv,True,1257,3,54,2002,2025
+OECD_Unemployment_Rate_2002_2025,OECD_Unemployment_Rate_2002_2025.csv,True,1338,3,59,2002,2025
+OECD_Tertiary_Education_2002_2025,OECD_Tertiary_Education_2002_2025.csv,True,943,3,51,2002,2024
+OECD_Productivity_GDP_per_Hour_2002_2025,OECD_Productivity_GDP_per_Hour_2002_2025.csv,True,991,3,44,2002,2024
+OECD_GDP_Growth_2002_2025,OECD_GDP_Growth_2002_2025.csv,True,1115,3,47,2002,2025
+Eurostat_Public_Debt_GDP_2002_2025,Eurostat_Public_Debt_GDP_2002_2025.csv,True,744,3,31,2002,2025
+WorldBank_Public_Debt_GDP_2002_2025,WorldBank_Public_Debt_GDP_2002_2025.csv,True,1160,3,91,2002,2024
+WorldBank_Energy_Import_Dependency_Raw_2002_2025,WorldBank_Energy_Import_Dependency_Raw_2002_2025.csv,True,3798,3,188,2002,2023

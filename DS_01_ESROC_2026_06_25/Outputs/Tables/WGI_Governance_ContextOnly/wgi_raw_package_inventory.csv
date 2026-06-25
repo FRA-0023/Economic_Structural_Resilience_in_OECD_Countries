@@ -1,0 +1,4 @@
+file_name,relative_path,size_kb
+WGICountry.csv,Data\Raw\Raw_Files\WGI_Extracted\WGICountry.csv,137.9
+WGICSV.csv,Data\Raw\Raw_Files\WGI_Extracted\WGICSV.csv,3332.48
+WGISeries.csv,Data\Raw\Raw_Files\WGI_Extracted\WGISeries.csv,103.94

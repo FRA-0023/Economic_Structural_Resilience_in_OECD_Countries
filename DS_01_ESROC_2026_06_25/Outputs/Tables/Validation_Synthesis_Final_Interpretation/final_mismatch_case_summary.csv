@@ -1,0 +1,5 @@
+shock_id,mismatch_source,mismatch_cases,case_type_summary,interpretation
+2007,GDP recovery validation,4,frontier_but_slow_recovery,GDP recovery mismatches identify cases where structural POSet position and recovery time diverge.
+2019,GDP recovery validation,2,frontier_but_slow_recovery,GDP recovery mismatches identify cases where structural POSet position and recovery time diverge.
+2007,Multi-indicator validation,22,"deep_layer_but_stronger_validation_outcome, frontier_but_weaker_validation_outcome",Multi-indicator mismatches show metric-specific divergences; these are expected in a multidimensional framework.
+2019,Multi-indicator validation,41,"deep_layer_but_stronger_validation_outcome, frontier_but_weaker_validation_outcome",Multi-indicator mismatches show metric-specific divergences; these are expected in a multidimensional framework.

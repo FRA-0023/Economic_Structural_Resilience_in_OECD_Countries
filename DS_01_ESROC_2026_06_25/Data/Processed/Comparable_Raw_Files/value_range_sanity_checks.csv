@@ -1,0 +1,11 @@
+variable,rows,countries,min_year,max_year,min_value,p01,median_value,p99,max_value,source_routes,roles,sanity_note
+energy_import_dependency_raw,3038,153,2002,2023,-2902.19268277532,-852.0874156311844,22.72914238357285,248.35803299985034,450.181459427082,WORLD_BANK_API,final_ordering_input,Raw energy dependency can be negative for net exporters and above 100 for high import dependence. Do not clip here.
+gdp_growth,1043,44,2002,2025,-16.0400195313042,-8.272394467822407,2.54766550568241,11.03678300577295,24.62398557014,DBNOMICS_OECD_MIRROR,recovery_and_validation_input,OK
+inflation_cpi,1116,48,2002,2025,-4.447547,-0.93152409,2.5,34.790570499999944,219.8845,OECD_REST,validation_or_sensitivity_input,OK
+productivity_gdp_per_hour,923,41,2002,2024,11.7448421499918,14.276425702621442,51.7788325482853,114.88383326125255,142.904430932881,DBNOMICS_OECD_MIRROR,validation_or_sensitivity_input,OK
+public_debt_gdp_canonical,1662,108,2002,2025,-1.17072566818484,5.992215333945253,50.252332314891945,164.17799999999997,209.4,EUROSTAT_PREFERRED_THEN_WORLDBANK,final_ordering_input_and_validation_input,Warning: negative public debt value detected. Check if it affects final analysis countries.
+public_debt_gdp_eurostat,648,27,2002,2025,3.9,6.499,54.4,181.30099999999996,209.4,EUROSTAT_API,public_debt_source_input,OK
+public_debt_gdp_worldbank,1060,83,2002,2024,-1.17072566818484,6.162831017820881,49.964533717812,152.68922617971322,194.682828796265,WORLD_BANK_API,public_debt_source_input,Warning: negative public debt value detected. Check if it affects final analysis countries.
+rd_gdp,998,47,2002,2025,0.16390567,0.22047637637,1.5461610979999998,4.850409924099997,6.958948349,OECD_REST,final_ordering_input,OK
+tertiary_education_25_64,915,48,2002,2024,5.4441252,8.133374672,31.314152,56.31980049133302,64.66224670410156,OECD_REST,final_ordering_input,OK
+unemployment_rate,1194,53,2002,2025,0.251,0.9385299999999999,6.5585,29.336139999999887,36.025,OECD_REST,final_ordering_input_and_validation_input,OK

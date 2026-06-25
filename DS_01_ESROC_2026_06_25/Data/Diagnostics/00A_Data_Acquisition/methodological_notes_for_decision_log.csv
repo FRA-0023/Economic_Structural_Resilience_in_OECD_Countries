@@ -1,0 +1,8 @@
+topic,note
+Acquisition sample rule,No country/sample filtering is done in 00A. All available countries/geographies are pulled for each selected indicator definition. Country inclusion is decided later.
+Productivity correction,Previous productivity extraction matched PRICE_BASE = V current prices. The corrected extraction uses GDP per hour worked with PRICE_BASE = Q constant prices through the DBnomics OECD mirror.
+GDP growth source correction,OECD REST query for GDP growth returned NoResultsFound. GDP growth is therefore acquired from the DBnomics OECD mirror of DSD_NAAG@DF_NAAG_I using real GDP growth rate series pattern A.*.B1GQ_R_GR.PC.NAAG_I.
+Tertiary education correction,"Tertiary education is rebuilt as adult tertiary attainment, age 25-64, not as current tertiary enrolment. This better represents structural human-capital stock."
+Energy dependency,World Bank energy import dependency is kept raw. Negative values are meaningful and should not be clipped.
+Public debt,"Eurostat and World Bank public debt are both acquired as raw files. Canonical public debt should be built after country-code standardization, not inside raw acquisition."
+WGI governance,WGI is downloaded as a raw package only. Six-dimension extraction and any derived governance composite are deferred to the WGI compilation notebook.

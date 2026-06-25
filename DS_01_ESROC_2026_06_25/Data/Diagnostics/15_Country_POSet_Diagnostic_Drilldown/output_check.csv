@@ -1,0 +1,14 @@
+file_name,processed_exists,diagnostics_exists,tables_exists
+country_poset_diagnostic_drilldown.csv,True,True,True
+target_country_problem_brief.csv,True,True,True
+target_direct_hasse_parents.csv,True,True,True
+target_direct_hasse_children.csv,True,True,True
+target_dominators_summary.csv,True,True,True
+target_dominated_summary.csv,True,True,True
+target_incomparability_summary.csv,True,True,True
+target_pairwise_variable_gaps.csv,True,True,True
+target_variable_diagnostics.csv,True,True,True
+target_dominators_variable_explanation.csv,True,True,True
+target_recovery_alignment.csv,True,True,True
+report_ready_country_drilldown_paragraphs.csv,True,True,True
+country_drilldown_run_summary.csv,True,True,True

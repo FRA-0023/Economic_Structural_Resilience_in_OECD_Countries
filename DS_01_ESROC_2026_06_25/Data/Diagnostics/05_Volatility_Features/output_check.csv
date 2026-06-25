@@ -1,0 +1,7 @@
+file_name,processed_exists,diagnostics_exists,tables_exists
+gdp_growth_stability_features_country_shock.csv,True,True,True
+gdp_growth_pre_shock_window_detail.csv,True,True,True
+volatility_feature_quality_summary.csv,True,True,True
+volatility_problem_cases.csv,True,True,True
+volatility_recovery_diagnostic_correlations.csv,True,True,True
+volatility_methodological_note.csv,True,True,True

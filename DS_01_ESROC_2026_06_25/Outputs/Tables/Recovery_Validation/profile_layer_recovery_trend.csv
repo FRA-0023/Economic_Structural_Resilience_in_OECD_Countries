@@ -1,0 +1,3 @@
+shock_id,n_countries,layer_recovery_spearman_correlation,interpretation
+2007,25,0.06984170737971897,Positive means deeper/worse layers tend to have slower recovery; negative means the opposite.
+2019,32,0.3094944510389975,Positive means deeper/worse layers tend to have slower recovery; negative means the opposite.

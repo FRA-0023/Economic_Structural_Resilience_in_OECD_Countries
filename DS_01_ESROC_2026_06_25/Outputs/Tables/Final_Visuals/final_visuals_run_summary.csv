@@ -1,0 +1,2 @@
+run_id,created_at,figures_created,tables_created,main_variable_set,main_ordering_variables,main_levels,main_poset_temporal_design,note
+20260625_094552,2026-06-25 09:45:52,8,7,baseline_5_variables,5,5,2007 and 2019 single pre-shock cross-sections,Final visuals generated for report. Main result remains profile-level POSet.

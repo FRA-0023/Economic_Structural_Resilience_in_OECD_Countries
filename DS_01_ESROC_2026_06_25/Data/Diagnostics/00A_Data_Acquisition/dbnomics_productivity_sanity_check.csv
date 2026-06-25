@@ -1,0 +1,2 @@
+dataset_label,source_route,series_pattern,country_filter,price_base,rows_saved,countries,min_year,max_year,min_value,median_value,max_value
+OECD_Productivity_GDP_per_Hour,DBNOMICS_OECD_MIRROR,*.A.GDPHRS._T.USD_PPP_H.Q._Z._Z._Z,none_all_available_series,Q_constant_prices,991,44,2002,2024,11.7448421499918,53.7708641153144,142.904430932881

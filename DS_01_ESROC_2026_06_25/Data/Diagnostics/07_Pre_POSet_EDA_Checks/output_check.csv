@@ -1,0 +1,13 @@
+file_name,processed_exists,diagnostics_exists,tables_exists
+baseline_complete_case_sample_by_shock.csv,True,True,True
+recommended_analysis_sample_by_shock.csv,True,True,True
+candidate_variable_scorecard.csv,True,True,True
+candidate_variable_redundancy_pairs.csv,True,True,True
+final5_correlation_matrix_long.csv,True,True,True
+discretization_level_diagnostic.csv,True,True,True
+profile_discretization_detail.csv,True,True,True
+main_profile_discretization_5levels.csv,True,True,True
+candidate_variable_sets.csv,True,True,True
+validation_design_table.csv,True,True,True
+report_ready_pre_poset_eda_notes.csv,True,True,True
+methodological_decision_updates_pre_poset.csv,True,True,True

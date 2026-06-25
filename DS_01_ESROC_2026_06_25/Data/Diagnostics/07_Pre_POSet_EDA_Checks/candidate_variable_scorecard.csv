@@ -1,0 +1,6 @@
+score_column,concept,main_variable_set,is_final_ordering_variable,coverage_2007_complete_cases,coverage_2019_complete_cases,max_abs_correlation_with_other_final_variables,correlation_redundancy_risk,keep_drop_decision,reason
+debt_capacity_score_0_100,Debt capacity,baseline_5_variables,True,25,35,0.33744426986906867,acceptable,keep,Part of the final five conceptually distinct resilience-capacity dimensions.
+employment_strength_score_0_100,Employment strength,baseline_5_variables,True,25,35,0.40849734828815937,acceptable,keep,Part of the final five conceptually distinct resilience-capacity dimensions.
+rd_intensity_score_0_100,R&D intensity,baseline_5_variables,True,25,35,0.5374475540862599,acceptable,keep,Part of the final five conceptually distinct resilience-capacity dimensions.
+human_capital_tertiary_score_0_100,Human capital,baseline_5_variables,True,25,35,0.5374475540862599,acceptable,keep,Part of the final five conceptually distinct resilience-capacity dimensions.
+energy_security_score_0_100,Energy security,baseline_5_variables,True,25,35,0.4731389833124016,acceptable,keep,Part of the final five conceptually distinct resilience-capacity dimensions.

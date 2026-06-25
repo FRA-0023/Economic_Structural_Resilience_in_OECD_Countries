@@ -1,0 +1,7 @@
+shock_id,status,countries
+2007,no_negative_growth_in_shock_window,8
+2007,not_recovered_by_available_data,1
+2007,recovered,35
+2019,no_negative_growth_in_shock_window,6
+2019,no_shock_window_data,1
+2019,recovered,37

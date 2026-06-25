@@ -1,0 +1,5 @@
+decision,choice,reason,risk_controlled
+Use two baseline cross-sections for POSet construction,2007 and 2019,They represent pre-shock structural conditions before the two validation shocks.,Avoids mixing post-shock recovery outcomes into ordering variables.
+Keep final POSet ordering to five variables,"debt_capacity_score_0_100, employment_strength_score_0_100, rd_intensity_score_0_100, human_capital_tertiary_score_0_100, energy_security_score_0_100",Balances multidimensionality with interpretability and avoids governance redundancy.,Reduces excessive dimensionality and avoids drifting into a single scalar index.
+Exclude WGI from main ordering,Context/sensitivity only,WGI dimensions are highly correlated and institutional context is better discussed separately.,Avoids overloading the final POSet with correlated governance dimensions.
+Use recovery variables only for validation,Recovery_2007 and Recovery_2019,"Recovery is an outcome, not a structural pre-shock capacity.",Prevents leakage from validation outcome into the ordering variables.

@@ -1,0 +1,8 @@
+table_file,processed_exists,diagnostics_exists,tables_exists
+final_presentation_key_numbers.csv,True,True,True
+final_visual_macro_indicator_frontier_advantage.csv,True,True,True
+final_visual_mismatch_case_summary.csv,True,True,True
+report_ready_figure_captions_updated.csv,True,True,True
+final_figure_inventory_updated.csv,True,True,True
+final_table_inventory_updated.csv,True,True,True
+final_visuals_update_run_summary.csv,True,True,True
