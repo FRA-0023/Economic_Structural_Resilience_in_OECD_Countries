@@ -1,0 +1,7 @@
+dimension,label,non_missing_rows,countries,min_year,max_year
+wgi_va_score,Voice and Accountability,4839,216,2002,2024
+wgi_pv_score,Political Stability and Absence of Violence/Terrorism,4859,216,2002,2024
+wgi_ge_score,Government Effectiveness,4788,214,2002,2024
+wgi_rq_score,Regulatory Quality,4786,214,2002,2024
+wgi_rl_score,Rule of Law,4875,216,2002,2024
+wgi_cc_score,Control of Corruption,4809,216,2002,2024

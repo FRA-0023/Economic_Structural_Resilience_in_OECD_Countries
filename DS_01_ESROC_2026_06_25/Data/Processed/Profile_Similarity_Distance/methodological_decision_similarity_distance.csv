@@ -1,3 +1,0 @@
-decision,final_choice,reason,alternatives_rejected
-Add pairwise similarity-distance matrix,Normalized ordinal Manhattan distance across final five-variable profiles,This measures structural closeness without replacing the POSet dominance relation or forcing a scalar resilience index.,Using only raw continuous variables; adding WGI/governance as a main distance dimension; using subjective weights.
-Use five final ordering dimensions only,"Debt capacity, employment strength, R&D intensity, tertiary human capital, energy security",Keeps distance analysis coherent with the final baseline POSet.,Adding WGI/governance or volatility to the main similarity distance.

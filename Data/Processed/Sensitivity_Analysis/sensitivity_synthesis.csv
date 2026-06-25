@@ -1,0 +1,7 @@
+finding_area,finding,supporting_output,report_use
+Main POSet structure,"The main 5-variable profile POSet produces substantial incomparability, supporting POSet rather than scalar ranking.",profile_poset_quality_diagnostics.csv,Results/methodology
+Discretization,Five levels are defensible because they preserve profile differentiation while remaining interpretable; 3 and 4 levels are retained as sensitivity checks.,sensitivity_profile_discretization_main_set.csv,Sensitivity analysis
+Variable selection,The final five variables remain conceptually distinct and prior correlation checks did not flag high redundancy.,candidate_variable_scorecard.csv; sensitivity_variable_set_profile_summary.csv,Data/methodology
+Epsilon tolerance,Tolerance-based epsilon is informative but can violate partial-order validity at higher epsilon values.,sensitivity_epsilon_tolerance_main_set.csv,Sensitivity caveat
+Epsilon-margin,The epsilon-margin rule is a cleaner conservative robustness check and remains valid across the tested grid.,sensitivity_epsilon_margin_main_set.csv,Robustness
+Recovery validation,"Frontier countries recover faster on average in both shocks, but the evidence is descriptive and not causal.",sensitivity_recovery_validation_main_set.csv,Validation/discussion

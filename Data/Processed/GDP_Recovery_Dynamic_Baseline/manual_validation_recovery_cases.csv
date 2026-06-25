@@ -1,0 +1,7 @@
+Country,shock_id,shock_label,status,first_negative_year,dynamic_baseline_year,baseline_gdp_index,recovery_year,recovery_years,final_available_year,final_gdp_index,not_recovered_value_used,shock_window_growth_values,note
+DEU,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,115.04950507801743,,"{2008: 0.887902330743618, 2009: -5.54455451920673}",GDP index returned to dynamic pre-shock baseline.
+ITA,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2023.0,15.0,2025,101.90403451571751,,"{2008: -1.02313851177097, 2009: -5.30515401233991}",GDP index returned to dynamic pre-shock baseline.
+USA,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,142.20016881700278,,"{2008: 0.113587248160993, 2009: -2.57650023225001}",GDP index returned to dynamic pre-shock baseline.
+DEU,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,100.25884399772487,,"{2020: -4.13191443239948, 2021: 3.90999994204108}",GDP index returned to dynamic pre-shock baseline.
+ITA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,106.41048560231836,,"{2020: -8.86822122185344, 2021: 8.93106210800055}",GDP index returned to dynamic pre-shock baseline.
+USA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,115.19443420394155,,"{2020: -2.08137597860093, 2021: 6.15202248021889}",GDP index returned to dynamic pre-shock baseline.

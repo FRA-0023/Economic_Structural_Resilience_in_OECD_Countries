@@ -1,2 +1,0 @@
-run_id,created_at,target_countries,shock_ids,target_rows,tables_created,figures_created,main_variable_set,main_levels,note
-20260624_215532,2026-06-24 21:55:32,"DEU,ITA,FRA,CAN,USA","2007,2019",10,12,11,baseline_5_variables,5,Country drilldown explains POSet position and does not create a scalar index.

@@ -1,0 +1,7 @@
+shock_id,matrix,file,rows,columns,created_at
+2007,observed_dominance_matrix,observed_dominance_matrix_shock_2007_5levels.csv,25,25,2026-06-24 21:48:46
+2007,observed_incomparability_matrix,observed_incomparability_matrix_shock_2007_5levels.csv,25,25,2026-06-24 21:48:46
+2007,observed_separation_matrix,observed_separation_matrix_shock_2007_5levels.csv,25,25,2026-06-24 21:48:46
+2019,observed_dominance_matrix,observed_dominance_matrix_shock_2019_5levels.csv,34,34,2026-06-24 21:48:46
+2019,observed_incomparability_matrix,observed_incomparability_matrix_shock_2019_5levels.csv,34,34,2026-06-24 21:48:46
+2019,observed_separation_matrix,observed_separation_matrix_shock_2019_5levels.csv,34,34,2026-06-24 21:48:46

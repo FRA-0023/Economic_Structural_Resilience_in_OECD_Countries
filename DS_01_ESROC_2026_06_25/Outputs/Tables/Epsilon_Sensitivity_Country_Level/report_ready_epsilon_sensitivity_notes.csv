@@ -1,6 +1,0 @@
-topic,report_text
-Epsilon sensitivity role,Country-level epsilon sensitivity was used as a robustness diagnostic rather than as the main POSet construction. The main POSet is the 5-level profile POSet.
-Epsilon grid,"The epsilon-tolerance grid tested values 0.00, 0.05, 0.10, 0.15, and 0.20 after rescaling all five final structural scores to a 0–1 range."
-Partial-order validity,"Because epsilon-tolerance can generate reciprocal dominance or cycles, each epsilon value was checked for partial-order validity. Values that create cycles should be interpreted only as diagnostic sensitivity outputs, not valid POSet structures."
-Reference epsilon,Epsilon = 0.10 is retained as a diagnostic reference value because it represents a moderate 10-percentage-point tolerance on the normalized 0–1 score scale. It does not replace the main profile-level dominance relation.
-Connection to epsilon-margin robustness,"This notebook tests epsilon as tolerance. The following robustness notebook tests the epsilon-margin rule, where epsilon is interpreted as a required minimum advantage rather than as tolerance."

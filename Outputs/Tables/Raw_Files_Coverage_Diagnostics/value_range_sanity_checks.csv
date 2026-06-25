@@ -1,0 +1,11 @@
+variable,rows,countries,min_year,max_year,years_available,min_value,median_value,max_value,is_final5_ordering_raw_variable,is_validation_raw_variable,is_broader_core_variable,range_note
+energy_import_dependency_raw,3038,153,2002,2023,22,-2902.19268277532,22.72914238357285,450.181459427082,True,False,True,Raw energy dependency can be negative for net exporters and above 100 for high import dependence. This is expected before energy-security transformation.
+gdp_growth,1043,44,2002,2025,24,-16.0400195313042,2.54766550568241,24.62398557014,False,True,True,OK
+inflation_cpi,1116,48,2002,2025,24,-4.447547,2.5,219.8845,False,True,True,OK
+productivity_gdp_per_hour,923,41,2002,2024,23,11.7448421499918,51.7788325482853,142.904430932881,False,True,True,OK
+public_debt_gdp_canonical,1662,108,2002,2025,24,-1.17072566818484,50.252332314891945,209.4,True,True,True,Negative debt value detected in raw canonical debt. Check whether affected countries enter final baseline samples.
+public_debt_gdp_eurostat,648,27,2002,2025,24,3.9,54.4,209.4,False,False,False,OK
+public_debt_gdp_worldbank,1060,83,2002,2024,23,-1.17072566818484,49.964533717812,194.682828796265,False,False,False,OK
+rd_gdp,998,47,2002,2025,24,0.16390567,1.5461610979999998,6.958948349,True,False,True,OK
+tertiary_education_25_64,915,48,2002,2024,23,5.4441252,31.314152,64.66224670410156,True,False,True,OK
+unemployment_rate,1194,53,2002,2025,24,0.251,6.5585,36.025,True,True,True,OK

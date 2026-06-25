@@ -1,0 +1,3 @@
+shock_id,countries,frontier_countries,frontier_mean_minus_nonfrontier_mean_recovery,frontier_median_minus_nonfrontier_median_recovery,layer_recovery_spearman_correlation,headline_takeaway
+2007,25,8,-0.8235294117647056,1.0,0.0698417073797189,Frontier countries recovered faster on average.
+2019,35,13,-0.263157894736842,0.0,0.3094944510389975,Frontier countries recovered faster on average.

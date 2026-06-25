@@ -1,4 +1,0 @@
-decision,choice,reason,risk_controlled
-Construct main POSet at profile level,5-level ordinal profiles,Profile-level construction makes the Hasse diagram interpretable and aligns with the ordinal POSet framework.,Avoids presenting continuous scores as a single ranking.
-Use direct Hasse cover relations,Transitive reduction of dominance relation,"Hasse diagrams should show only direct cover relations, not all transitive dominance relations.",Improves readability and prevents visual over-cluttering.
-Keep digit-sum as layout aid only,No scalar score or total ranking,"The project goal is structural comparison, not an Economic Resilience Index.",Avoids accidental drift into scalar ranking.

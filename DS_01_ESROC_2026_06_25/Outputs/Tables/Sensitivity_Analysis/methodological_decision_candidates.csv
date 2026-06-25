@@ -1,5 +1,0 @@
-decision,status,justification,sensitivity_evidence
-Report 5-level profile POSet as main result,final,"Balances interpretability, profile differentiation, and POSet structure.",3/4/5-level discretization diagnostic.
-"Report epsilon-margin as robustness, not main result",final,Margin rule remains valid but is country-level and secondary to profile POSet.,epsilon_margin_run_summary.csv.
-Treat epsilon-tolerance cautiously,final,Tolerance can create invalid partial orders at higher epsilon values.,epsilon_validity_diagnostics.csv.
-Use recovery validation descriptively,final,Recovery outcomes validate/interpret but do not construct the POSet.,recovery_validation_takeaway_table.csv.

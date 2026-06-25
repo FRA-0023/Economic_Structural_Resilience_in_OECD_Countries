@@ -1,2 +1,0 @@
-analysis_year,num_levels,selected_epsilon_margin,num_countries,num_unique_profiles,poset_height,poset_width,is_dag,comparability_ratio,incomparability_ratio
-2019,5,0.5,38,36,3,26,True,0.09,0.91

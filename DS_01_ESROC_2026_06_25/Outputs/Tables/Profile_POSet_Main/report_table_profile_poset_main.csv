@@ -1,3 +1,0 @@
-shock_id,baseline_year,countries,unique_profiles,dominance_relations,hasse_edges,layers,frontier_profiles,frontier_countries,comparability_ratio,incomparability_ratio,interpretation_note
-2007,2007,25,25,96,52,5,8,8,0.32,0.68,Profile-level POSet using five final ordering variables and five ordinal levels. This is not a scalar index or total ranking.
-2019,2019,35,34,129,64,4,12,13,0.22994652406417113,0.7700534759358288,Profile-level POSet using five final ordering variables and five ordinal levels. This is not a scalar index or total ranking.

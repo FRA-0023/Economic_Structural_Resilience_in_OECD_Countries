@@ -1,0 +1,3 @@
+shock_id,baseline_year,countries,unique_profiles,frontier_countries,layers,dominance_relations,hasse_edges,comparability_ratio,incomparability_ratio,interpretation
+2007,2007,25,25,8,5,96,52,0.32,0.68,High incomparability supports POSet analysis because many countries cannot be ordered without arbitrary trade-offs.
+2019,2019,35,34,13,4,129,64,0.2299465240641711,0.7700534759358288,High incomparability supports POSet analysis because many countries cannot be ordered without arbitrary trade-offs.

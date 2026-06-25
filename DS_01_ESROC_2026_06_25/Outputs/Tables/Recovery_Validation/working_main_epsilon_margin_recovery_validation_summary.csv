@@ -1,5 +1,0 @@
-shock_id,baseline_year,epsilon_margin,is_frontier,countries,mean_recovery_years,median_recovery_years,min_recovery_years,max_recovery_years,country_list,reference_role
-2007,2007,0.1,True,12,4.833333333333333,5.0,1.0,8.0,"CAN, CZE, DNK, EST, FIN, GBR, IRL, LTU, LUX, SVN, SWE, USA",robustness_reference_only_not_main_profile_poset
-2007,2007,0.1,False,13,6.230769230769231,5.0,0.0,20.0,"AUT, BEL, DEU, ESP, FRA, GRC, HUN, ITA, LVA, NLD, POL, PRT, SVK",robustness_reference_only_not_main_profile_poset
-2019,2019,0.1,True,20,1.0,1.0,0.0,2.0,"AUS, AUT, BGR, CAN, CHE, CZE, DEU, DNK, EST, FIN, HUN, IRL, KOR, LUX, NZL, POL, ROU, SVN, SWE, USA",robustness_reference_only_not_main_profile_poset
-2019,2019,0.1,False,15,1.3571428571428572,1.5,0.0,2.0,"BEL, COL, ESP, FRA, GBR, GRC, HRV, ITA, LTU, LVA, NLD, PRT, SVK, TUR, ZAF",robustness_reference_only_not_main_profile_poset

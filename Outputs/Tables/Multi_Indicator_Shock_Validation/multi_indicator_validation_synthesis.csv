@@ -1,0 +1,5 @@
+finding_area,finding,report_use
+Multi-indicator validation,"Validation extends beyond GDP recovery by checking GDP growth, unemployment, inflation, debt, and productivity outcomes.",Validation methodology
+Outcome leakage control,All validation indicators are evaluated after the POSet is constructed and are not used in the ordering relation.,Methodology safeguard
+Frontier evidence,The evidence matrix indicates how often POSet frontier countries outperform non-frontier countries across macro outcomes.,Results and discussion
+Interpretation,"Mixed evidence or mismatch cases should be interpreted as evidence of multidimensional complexity, not as failure of the method.",Discussion and limitations

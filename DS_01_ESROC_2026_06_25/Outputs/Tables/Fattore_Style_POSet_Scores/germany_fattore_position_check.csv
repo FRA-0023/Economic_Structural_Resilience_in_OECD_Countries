@@ -1,3 +1,0 @@
-shock_id,baseline_year,Country,profile_code,layer,is_pareto_frontier,observed_dominance_score_normalized,observed_dominated_by_score_normalized,observed_incomparability_score_normalized,embedded_dominance_score_normalized,embedded_dominated_by_score_normalized,embedded_incomparability_score_normalized,embedded_separation_score_normalized
-2007,2007,DEU,2-1-4-2-3,4,False,0.041666666666666664,0.2916666666666667,0.6666666666666666,0.015044814340588988,0.1533290653008963,0.8316261203585147,0.001557935735150925
-2019,2019,DEU,3-5-5-2-2,1,True,0.12121212121212122,0.0,0.8787878787878788,0.09571062740076824,0.015044814340588988,0.8892445582586428,0.03146853146853147

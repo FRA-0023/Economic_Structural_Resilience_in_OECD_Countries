@@ -1,0 +1,5 @@
+shock_id,baseline_year,is_pareto_frontier,countries,mean_recovery_years,median_recovery_years,min_recovery_years,max_recovery_years,countries_with_recovery_data,country_list,result_role
+2007,2007,True,8,5.0,6.0,1.0,8.0,8,"CAN, DNK, EST, FIN, GBR, LUX, SVN, USA",main_profile_poset_validation
+2007,2007,False,17,5.823529411764706,5.0,0.0,20.0,17,"AUT, BEL, CZE, DEU, ESP, FRA, GRC, HUN, IRL, ITA, LTU, LVA, NLD, POL, PRT, SVK, SWE",main_profile_poset_validation
+2019,2019,True,13,1.0,1.0,0.0,2.0,13,"AUS, CAN, CHE, CZE, DEU, DNK, EST, IRL, KOR, LUX, POL, SWE, USA",main_profile_poset_validation
+2019,2019,False,22,1.263157894736842,1.0,0.0,2.0,19,"AUT, BEL, BGR, COL, ESP, FIN, FRA, GBR, GRC, HRV, HUN, ITA, LTU, LVA, NLD, NZL, PRT, ROU, SVK, SVN, TUR, ZAF",main_profile_poset_validation

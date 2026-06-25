@@ -1,0 +1,89 @@
+Country,shock_id,shock_label,status,first_negative_year,dynamic_baseline_year,baseline_gdp_index,recovery_year,recovery_years,final_available_year,final_gdp_index,not_recovered_value_used,shock_window_growth_values,note
+AUS,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 1.95484826298521, 2009: 2.21004795300734}",No negative GDP growth observed in shock window; assigned recovery value 0.
+AUT,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,116.01243636693529,,"{2008: 1.45330580608418, 2009: -3.58626483259779}",GDP index returned to dynamic pre-shock baseline.
+BEL,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,124.65815596316075,,"{2008: 0.446905130727231, 2009: -1.90644105515336}",GDP index returned to dynamic pre-shock baseline.
+BRA,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2023,123.69744884403738,,"{2008: 5.09419555783932, 2009: -0.125811937286412}",GDP index returned to dynamic pre-shock baseline.
+CAN,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,135.40341391188645,,"{2008: 0.995406342461433, 2009: -2.91508625839376}",GDP index returned to dynamic pre-shock baseline.
+CHE,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,132.1962132405666,,"{2008: 2.53159628971551, 2009: -1.93490949501716}",GDP index returned to dynamic pre-shock baseline.
+CHL,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,154.79403213365052,,"{2008: 3.78939280638046, 2009: -1.11803723646788}",GDP index returned to dynamic pre-shock baseline.
+CHN,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2023,,0.0,"{2008: 9.65065957999029, 2009: 9.3987416270343}",No negative GDP growth observed in shock window; assigned recovery value 0.
+COL,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 3.2834461861654, 2009: 1.13964864548062}",No negative GDP growth observed in shock window; assigned recovery value 0.
+CRI,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2024,169.98086070483473,,"{2008: 4.73817487793161, 2009: -0.87345594285363}",GDP index returned to dynamic pre-shock baseline.
+CZE,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2014.0,5.0,2025,128.13973502757062,,"{2008: 2.6122680720514, 2009: -4.79832416684926}",GDP index returned to dynamic pre-shock baseline.
+DEU,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,115.04950507801743,,"{2008: 0.887902330743618, 2009: -5.54455451920673}",GDP index returned to dynamic pre-shock baseline.
+DNK,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2015.0,7.0,2025,126.50604118796873,,"{2008: -0.417178439991002, 2009: -4.97447905669059}",GDP index returned to dynamic pre-shock baseline.
+ESP,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2017.0,8.0,2025,117.89987717839517,,"{2008: 0.767165748290698, 2009: -3.76813306940054}",GDP index returned to dynamic pre-shock baseline.
+EST,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2016.0,8.0,2025,117.83524347570125,,"{2008: -5.12531313097465, 2009: -14.6302202382152}",GDP index returned to dynamic pre-shock baseline.
+FIN,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2017.0,8.0,2025,103.0160124315925,,"{2008: 0.784431219273039, 2009: -8.07603089881314}",GDP index returned to dynamic pre-shock baseline.
+FRA,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,118.07739215803315,,"{2008: 0.380171435849127, 2009: -2.82455153714782}",GDP index returned to dynamic pre-shock baseline.
+GBR,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2013.0,5.0,2025,122.19523845024241,,"{2008: -0.049411654562256, 2009: -4.58740819632889}",GDP index returned to dynamic pre-shock baseline.
+GRC,2007,Global Financial Crisis,not_recovered_by_available_data,2009.0,2008.0,100.0,,20.0,2025,86.13966960101418,20.0,"{2008: 0.057473865625609, 2009: -4.11927611877196}",GDP index did not return to 100 by last available year; assigned 20.
+HUN,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2014.0,5.0,2025,132.76707861355686,,"{2008: 0.993437086399175, 2009: -6.74016608670778}",GDP index returned to dynamic pre-shock baseline.
+IDN,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 6.01370250263284, 2009: 4.70176851705064}",No negative GDP growth observed in shock window; assigned recovery value 0.
+IND,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2023,,0.0,"{2008: 3.890957075823, 2009: 8.47978662038763}",No negative GDP growth observed in shock window; assigned recovery value 0.
+IRL,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2014.0,6.0,2025,246.3237583636278,,"{2008: -4.48407076041038, 2009: -5.0957827434462}",GDP index returned to dynamic pre-shock baseline.
+ISL,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2015.0,6.0,2025,131.55131799433966,,"{2008: 1.69961074664239, 2009: -8.32146413973676}",GDP index returned to dynamic pre-shock baseline.
+ISR,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 3.21587999998205, 2009: 1.22015999998478}",No negative GDP growth observed in shock window; assigned recovery value 0.
+ITA,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2023.0,15.0,2025,101.90403451571751,,"{2008: -1.02313851177097, 2009: -5.30515401233991}",GDP index returned to dynamic pre-shock baseline.
+JPN,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2013.0,5.0,2025,108.11705303936137,,"{2008: -1.16662209352171, 2009: -5.9359411384995}",GDP index returned to dynamic pre-shock baseline.
+KOR,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 3.0044045167957, 2009: 0.819861756417951}",No negative GDP growth observed in shock window; assigned recovery value 0.
+LTU,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2014.0,5.0,2025,144.83814899883404,,"{2008: 2.59946054447044, 2009: -14.8386107131479}",GDP index returned to dynamic pre-shock baseline.
+LUX,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2010.0,2.0,2025,131.49773960922505,,"{2008: -0.302274359961343, 2009: -3.23895280631301}",GDP index returned to dynamic pre-shock baseline.
+LVA,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2018.0,10.0,2025,110.74001304579593,,"{2008: -3.38871665849958, 2009: -16.0400195313042}",GDP index returned to dynamic pre-shock baseline.
+MEX,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,124.780432616325,,"{2008: 0.943331848129666, 2009: -6.29525054832923}",GDP index returned to dynamic pre-shock baseline.
+NLD,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2015.0,6.0,2025,123.28418905502106,,"{2008: 2.11674512794887, 2009: -3.66528149253693}",GDP index returned to dynamic pre-shock baseline.
+NOR,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2025,128.2888983685284,,"{2008: 0.822805814212466, 2009: -1.61327152548187}",GDP index returned to dynamic pre-shock baseline.
+NZL,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2009.0,1.0,2025,149.07042381705895,,"{2008: -1.46081231848151, 2009: 2.0759238193193}",GDP index returned to dynamic pre-shock baseline.
+POL,2007,Global Financial Crisis,no_negative_growth_in_shock_window,,2007.0,100.0,2008.0,0.0,2025,,0.0,"{2008: 4.38376998681282, 2009: 2.61512980343654}",No negative GDP growth observed in shock window; assigned recovery value 0.
+PRT,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2018.0,9.0,2025,116.83678288509945,,"{2008: 0.319247306931731, 2009: -3.12207824533705}",GDP index returned to dynamic pre-shock baseline.
+RUS,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2011.0,2.0,2019,112.35338721038096,,"{2008: 5.24795364371278, 2009: -7.82088498169573}",GDP index returned to dynamic pre-shock baseline.
+SVK,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,138.61110158608602,,"{2008: 5.3633772123195, 2009: -5.50533790972225}",GDP index returned to dynamic pre-shock baseline.
+SVN,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2017.0,8.0,2025,125.35509106214052,,"{2008: 3.37223807744464, 2009: -7.59058653473787}",GDP index returned to dynamic pre-shock baseline.
+SWE,2007,Global Financial Crisis,recovered,2008.0,2007.0,100.0,2010.0,2.0,2025,130.56038151057342,,"{2008: -0.923113250067963, 2009: -4.25561384207619}",GDP index returned to dynamic pre-shock baseline.
+TUR,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,227.2455400548908,,"{2008: 0.920118240308471, 2009: -4.88269399737999}",GDP index returned to dynamic pre-shock baseline.
+USA,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,142.20016881700278,,"{2008: 0.113587248160993, 2009: -2.57650023225001}",GDP index returned to dynamic pre-shock baseline.
+ZAF,2007,Global Financial Crisis,recovered,2009.0,2008.0,100.0,2010.0,1.0,2025,120.41924643161815,,"{2008: 3.19104388525367, 2009: -1.5380891344573}",GDP index returned to dynamic pre-shock baseline.
+AUS,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2025,,0.0,"{2020: 2.00694844335035, 2021: 4.25304559238733}",No negative GDP growth observed in shock window; assigned recovery value 0.
+AUT,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,102.90928305714455,,"{2020: -6.31825516760371, 2021: 4.92309176061612}",GDP index returned to dynamic pre-shock baseline.
+BEL,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,109.1115041878688,,"{2020: -4.7929839083518, 2021: 6.25445686466592}",GDP index returned to dynamic pre-shock baseline.
+BRA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2023,107.77045107210098,,"{2020: -3.27675879611742, 2021: 4.7626043797599}",GDP index returned to dynamic pre-shock baseline.
+CAN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,111.62272421802889,,"{2020: -5.03823341596652, 2021: 5.95052804144319}",GDP index returned to dynamic pre-shock baseline.
+CHE,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,111.27098711475118,,"{2020: -2.25525798669794, 2021: 6.1762283856019}",GDP index returned to dynamic pre-shock baseline.
+CHL,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,113.10755526410479,,"{2020: -6.13969694120921, 2021: 11.3374032409968}",GDP index returned to dynamic pre-shock baseline.
+CHN,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2023,,0.0,"{2020: 2.08485182630195, 2021: 8.44851596663545}",No negative GDP growth observed in shock window; assigned recovery value 0.
+COL,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,115.95132452134749,,"{2020: -7.1859141376086, 2021: 10.8011981904878}",GDP index returned to dynamic pre-shock baseline.
+CRI,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2024,118.45491621000079,,"{2020: -4.27335432159096, 2021: 7.93576224742543}",GDP index returned to dynamic pre-shock baseline.
+CZE,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,105.28011848917207,,"{2020: -5.30487955463877, 2021: 4.02901832055149}",GDP index returned to dynamic pre-shock baseline.
+DEU,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,100.25884399772487,,"{2020: -4.13191443239948, 2021: 3.90999994204108}",GDP index returned to dynamic pre-shock baseline.
+DNK,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,112.58327183171201,,"{2020: -1.78010601831291, 2021: 6.50025445756294}",GDP index returned to dynamic pre-shock baseline.
+ESP,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,110.15587660478606,,"{2020: -10.9400706350371, 2021: 6.68314420473002}",GDP index returned to dynamic pre-shock baseline.
+EST,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,101.49285091003763,,"{2020: -2.88380956806746, 2021: 8.25488395731791}",GDP index returned to dynamic pre-shock baseline.
+FIN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,100.12783525013245,,"{2020: -2.49103620977239, 2021: 2.67634659159786}",GDP index returned to dynamic pre-shock baseline.
+FRA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,105.6738033217902,,"{2020: -7.4406458994823, 2021: 6.8823378336024}",GDP index returned to dynamic pre-shock baseline.
+GBR,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,105.45210055115737,,"{2020: -10.0478966434945, 2021: 8.54311184370839}",GDP index returned to dynamic pre-shock baseline.
+GRC,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,110.8033285283478,,"{2020: -9.1962315987005, 2021: 8.65449796820443}",GDP index returned to dynamic pre-shock baseline.
+HUN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,107.25205713574375,,"{2020: -4.33872540003526, 2021: 7.22291580740456}",GDP index returned to dynamic pre-shock baseline.
+IDN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,124.03262355742983,,"{2020: -2.06551182934165, 2021: 3.70288562827753}",GDP index returned to dynamic pre-shock baseline.
+IND,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2023,121.4380955186899,,"{2020: -5.77772470687492, 2021: 9.68959249190759}",GDP index returned to dynamic pre-shock baseline.
+IRL,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2025,,0.0,"{2020: 7.15369508876986, 2021: 16.2581880752077}",No negative GDP growth observed in shock window; assigned recovery value 0.
+ISL,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,112.24400849616826,,"{2020: -6.64587812676603, 2021: 5.18057192101836}",GDP index returned to dynamic pre-shock baseline.
+ISR,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,121.11321904381485,,"{2020: -1.80243000003329, 2021: 9.33534691282232}",GDP index returned to dynamic pre-shock baseline.
+ITA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,106.41048560231836,,"{2020: -8.86822122185344, 2021: 8.93106210800055}",GDP index returned to dynamic pre-shock baseline.
+JPN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,102.13360985962434,,"{2020: -4.28327942682386, 2021: 3.56419531468468}",GDP index returned to dynamic pre-shock baseline.
+KOR,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,111.68861829217656,,"{2020: -0.700242317542107, 2021: 4.61296795454286}",GDP index returned to dynamic pre-shock baseline.
+LTU,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2025,,0.0,"{2020: 0.042814984430944, 2021: 6.3948169637992}",No negative GDP growth observed in shock window; assigned recovery value 0.
+LUX,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,106.37341458385096,,"{2020: -0.510052266643745, 2021: 6.92973308234224}",GDP index returned to dynamic pre-shock baseline.
+LVA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,106.40056911006293,,"{2020: -3.46922750780554, 2021: 6.94254173062591}",GDP index returned to dynamic pre-shock baseline.
+MEX,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,105.92134392877935,,"{2020: -8.35403459655553, 2021: 6.04848344372723}",GDP index returned to dynamic pre-shock baseline.
+NLD,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,109.70884021965333,,"{2020: -3.86799717641019, 2021: 6.27683592921156}",GDP index returned to dynamic pre-shock baseline.
+NOR,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,110.00356499413617,,"{2020: -1.36055724136171, 2021: 4.14314688956676}",GDP index returned to dynamic pre-shock baseline.
+NZL,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2025,,0.0,"{2020: 0.20137027731347, 2021: 4.38121051766326}",No negative GDP growth observed in shock window; assigned recovery value 0.
+POL,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,118.26657219485682,,"{2020: -2.03556623177296, 2021: 6.92718170695528}",GDP index returned to dynamic pre-shock baseline.
+PRT,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,111.281076891137,,"{2020: -8.20463158755973, 2021: 5.55875648640731}",GDP index returned to dynamic pre-shock baseline.
+RUS,2019,COVID shock,no_shock_window_data,,,,,,2019,,,"{2020: nan, 2021: nan}",No GDP growth value available in the shock-window years.
+SVK,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,108.58924523231995,,"{2020: -2.58551241733207, 2021: 5.65585880655551}",GDP index returned to dynamic pre-shock baseline.
+SVN,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,112.37043559591726,,"{2020: -4.08499980162852, 2021: 8.41686299430883}",GDP index returned to dynamic pre-shock baseline.
+SWE,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,107.95266941265191,,"{2020: -1.93379704032216, 2021: 5.2258643028773}",GDP index returned to dynamic pre-shock baseline.
+TUR,2019,COVID shock,no_negative_growth_in_shock_window,,2019.0,100.0,2020.0,0.0,2025,,0.0,"{2020: 1.80306249954635, 2021: 11.8110944853985}",No negative GDP growth observed in shock window; assigned recovery value 0.
+USA,2019,COVID shock,recovered,2020.0,2019.0,100.0,2021.0,1.0,2025,115.19443420394155,,"{2020: -2.08137597860093, 2021: 6.15202248021889}",GDP index returned to dynamic pre-shock baseline.
+ZAF,2019,COVID shock,recovered,2020.0,2019.0,100.0,2022.0,2.0,2025,102.9001566842572,,"{2020: -6.1689177132215, 2021: 4.85864864891566}",GDP index returned to dynamic pre-shock baseline.

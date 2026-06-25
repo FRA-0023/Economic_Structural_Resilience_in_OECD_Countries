@@ -1,3 +1,0 @@
-shock_id,baseline_year,epsilon,countries,relations,frontier_countries,comparability_ratio,incomparability_ratio,is_valid_partial_order,diagnostic_role,reference_role
-2007,2007,0.1,25,105,7,0.35,0.65,True,epsilon_tolerance_sensitivity_not_main_profile_poset,diagnostic_reference_only_not_main_profile_poset
-2019,2019,0.1,35,248,5,0.4134453781512605,0.5865546218487395,False,epsilon_tolerance_sensitivity_not_main_profile_poset,diagnostic_reference_only_not_main_profile_poset

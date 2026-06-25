@@ -1,5 +1,0 @@
-topic,report_text
-Purpose of diagnostic scores,"A Fattore-style diagnostic scoring layer was added after the main POSet construction to summarize dominance, incomparability, and profile-space separation. These scores are used only to interpret the partial-order structure and are not combined into an Economic Resilience Index."
-Observed versus embedded scores,Observed scores describe relations among the profiles that actually appear in the sample. Embedded scores instead compare a profile with the full theoretical ordinal profile space implied by five variables and five levels.
-Incomparability interpretation,The incomparability score is important because it quantifies how often a profile cannot be ordered against other profiles without making arbitrary trade-offs. High incomparability supports the use of POSet rather than a forced scalar ranking.
-No scalar index,"Although the diagnostic scores are numeric, they are not used to create a single final ranking. The main result remains the Hasse diagram, layer structure, Pareto/frontier profiles, and recovery validation."

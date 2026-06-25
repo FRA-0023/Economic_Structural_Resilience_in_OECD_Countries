@@ -1,3 +1,0 @@
-Country,shock_id,shock_label,status,first_negative_year,dynamic_baseline_year,baseline_gdp_index,recovery_year,recovery_years,final_available_year,final_gdp_index,not_recovered_value_used,shock_window_growth_values,note
-GRC,2007,Global Financial Crisis,not_recovered_by_available_data,2009.0,2008.0,100.0,,20.0,2025,86.13966960101418,20.0,"{2008: 0.057473865625609, 2009: -4.11927611877196}",GDP index did not return to 100 by last available year; assigned 20.
-RUS,2019,COVID shock,no_shock_window_data,,,,,,2019,,,"{2020: nan, 2021: nan}",No GDP growth value available in the shock-window years.

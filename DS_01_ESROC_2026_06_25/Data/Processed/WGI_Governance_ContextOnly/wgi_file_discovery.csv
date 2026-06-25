@@ -1,4 +1,0 @@
-role,path,exists
-main_data,D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Raw\Raw_Files\WGI_Extracted\WGICSV.csv,True
-country_metadata,D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Raw\Raw_Files\WGI_Extracted\WGICountry.csv,True
-series_metadata,D:\Milano Bicocca\Course Materials\1st Year\02 - Data Science Lab - 2526-1-FDS02Q003\03 Projects\Index\Notebooks\Run_24\Data\Raw\Raw_Files\WGI_Extracted\WGISeries.csv,True

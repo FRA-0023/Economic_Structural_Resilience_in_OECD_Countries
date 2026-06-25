@@ -1,2 +1,0 @@
-run_id,created_at,main_variable_set,main_levels,distance_method,similarity_method,ordering_variables_count,shocks,country_rows,pairwise_distance_rows,figures_created,tables_created,note
-20260625_094100,2026-06-25 09:41:00,baseline_5_variables,5,normalized ordinal Manhattan distance,1 - normalized ordinal Manhattan distance,5,"2007, 2019",60,895,6,14,Similarity-distance analysis complements POSet dominance; it does not create a scalar resilience index.

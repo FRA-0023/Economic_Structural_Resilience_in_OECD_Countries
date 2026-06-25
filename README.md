@@ -1,227 +1,159 @@
-# Economic Structural Resilience — POSet Framework
+# Economic Structural Resilience in OECD Countries
+### A POSet-Based Framework for Multi-Dimensional Economic Comparison
 
-A research project focused on the construction of a **Partial Order (POSet)** framework for the structural comparison of OECD economies under multidimensional resilience criteria.
-
-The project studies whether certain structural economic configurations are associated with stronger adaptive capacity during major systemic shocks such as:
-
-* the 2008 financial crisis,
-* the COVID-19 crisis,
-* and the recent inflation/energy shock.
+> **Authors:** Colombini Francesco (944941) · Haider Ali (948092)  
+> **Course:** Data Science Lab — Università degli Studi di Milano-Bicocca  
+> **Contact:** {f.colombini4, a.haider16}@campus.unimib.it
 
 ---
 
-# Project Objective
+## Overview
 
-Traditional resilience rankings usually:
+This project investigates whether pre-shock economic structures are associated with stronger resilience outcomes across OECD countries during systemic crises. Rather than constructing a composite resilience index, we apply **Partial Order Theory (POSet)** to compare countries across five structural dimensions without forcing arbitrary weighting or linear rankings.
 
-* aggregate many indicators into a single score,
-* impose arbitrary weights,
-* and force countries into linear rankings.
+The framework is validated against two major shocks:
+- **Global Financial Crisis** — structural baseline 2007, validation window 2008–2012
+- **COVID-19 Pandemic** — structural baseline 2019, validation window 2020–2023
 
-This project follows a different approach.
-
-Instead of creating a composite index, we model OECD economies as a **partially ordered system** using:
-
-* Pareto dominance,
-* ε-dominance robustness,
-* and Partial Order Theory (POSet).
-
-The final goal is to identify:
-
-* structurally dominant economies,
-* structurally vulnerable economies,
-* and incomparable economic configurations characterized by different trade-offs.
+**Key finding:** OECD economies are largely structurally incomparable (incomparability ratio: 0.68 in 2007, 0.77 in 2019). Frontier countries nevertheless recover faster and outperform non-frontier countries on 5 out of 6 post-shock macroeconomic indicators in both periods.
 
 ---
 
-# Core Research Question
+## Methodology
 
-> Which structural economic configurations are associated with stronger resilience during systemic crises?
+### Ordering Variables (pre-shock structural capacity)
 
----
+| Variable | Interpretation | Direction |
+|---|---|---|
+| Debt Capacity | Lower fiscal fragility | ↑ |
+| Employment Strength | Lower labour-market stress | ↑ |
+| R&D Intensity | Innovation capability | ↑ |
+| Tertiary Human Capital | Adaptive skills base | ↑ |
+| Energy Security | Lower external energy exposure | ↑ |
 
-# Methodological Framework
+### Validation Variables (post-shock outcomes)
 
-The project is divided into two main layers:
+GDP recovery time · Average GDP growth · Average unemployment · Unemployment change · Absolute inflation · Public debt change · Productivity change
 
-## 1. Structural Ordering Layer (POSet)
+### POSet Construction
 
-A subset of structural variables is used to construct the partial order between countries.
-
-### Ordering Variables
-
-| Variable                      | Interpretation                     | Direction        |
-| ----------------------------- | ---------------------------------- | ---------------- |
-| R&D expenditure (% GDP)       | Innovation and adaptive capability | Higher is better |
-| Trust in institutions         | Institutional robustness           | Higher is better |
-| Public debt (% GDP)           | Financial fragility                | Lower is better  |
-| Energy import dependency      | External vulnerability             | Lower is better  |
-| Tertiary education attainment | Human capital adaptability         | Higher is better |
-
-These variables define the multidimensional structural space of the POSet.
+1. Direction-align all variables (higher = better)
+2. Discretize into 5 ordinal levels via within-sample quantile binning
+3. Apply strict Pareto dominance: country A dominates B iff A ≥ B on all dimensions and A > B on at least one
+4. Compute transitive reduction → Hasse diagram
+5. Epsilon-margin robustness check (ε ∈ [0.00, 0.20])
 
 ---
 
-## 2. Validation Layer (Shock Analysis)
+## Data Sources
 
-A separate set of variables is used to evaluate how countries behaved during crises.
+| Dataset | Source | Role |
+|---|---|---|
+| R&D expenditure (% GDP) | OECD SDMX | Ordering |
+| Tertiary education attainment | OECD SDMX | Ordering |
+| Unemployment rate | OECD SDMX | Ordering / Validation |
+| GDP growth | OECD SDMX | Validation |
+| Inflation (CPI) | OECD SDMX | Validation |
+| Labour productivity | OECD SDMX | Validation |
+| Public debt (% GDP) | Eurostat (primary) / World Bank (fallback) | Ordering / Validation |
+| Energy import dependency | World Bank | Ordering |
+| Worldwide Governance Indicators | World Bank | Context only |
 
-### Validation Variables
-
-* GDP growth/contraction
-* Inflation dynamics
-* Unemployment variation
-* Productivity variation
-* Recovery speed
-* Volatility measures
-
-These variables are NOT used to build the order itself.
-
-They are used only to test whether structurally dominant countries exhibit:
-
-* lower shock sensitivity,
-* faster recovery,
-* and stronger systemic stability.
+All data is retrieved programmatically via official APIs. No manual downloads required (see acquisition notebooks).
 
 ---
 
-# Data Source
+## Results Summary
 
-All data are collected from the OECD Data Explorer.
-
-The full dataset is downloaded first, cleaned, normalized, and only afterwards divided into:
-
-* ordering variables,
-* validation variables.
-
----
-
-# POSet Construction
-
-Each country is represented as a normalized multidimensional vector:
-
-$$x = (x_1, x_2, x_3, x_4, x_5)$$
-
-The project uses **ε-dominance** instead of strict Pareto dominance to avoid artificial comparisons caused by statistical noise.
-
-Country A dominates country B if:
-
-$$x_i(A) \ge x_i(B) - \varepsilon_i \quad \forall i$$
-
-and:
-
-$$x_j(A) > x_j(B) + \varepsilon_j$$
-
-for at least one variable (j).
-
-Where:
-
-$$\varepsilon_i = 0.1 \cdot \sigma_i$$
-
-and (\sigma_i) is the standard deviation of variable (i).
+| Metric | GFC 2007 | COVID-19 2019 |
+|---|---|---|
+| Countries included | 25 | 35 |
+| Distinct structural profiles | 25 | 34 |
+| Pareto-frontier countries | 8 (32%) | 13 (37%) |
+| Incomparability ratio | 0.68 | 0.77 |
+| GDP recovery frontier advantage | 0.82 years | 0.26 years |
+| Macro indicators favouring frontier | 5/6 | 5/6 |
 
 ---
 
-# Expected Outputs
-
-The project produces:
-
-* Dominance matrix
-* Comparability matrix
-* Hasse diagram
-* Pareto frontier
-* Structural hierarchy of OECD economies
-* Shock-resilience validation analysis
-
----
-
-# Key Conceptual Contribution
-
-The framework avoids:
-
-* arbitrary weighting systems,
-* forced linear rankings,
-* excessive dimensional reduction.
-
-Instead, it explicitly models:
-
-* multidimensionality,
-* incomparability,
-* and structural trade-offs between economic systems.
-
----
-
-# Repository Structure
+## Project Structure
 
 ```text
 project/
 │
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── validation/
+│   ├── raw/                  # Original API responses and bulk downloads
+│   ├── processed/            # Harmonized country-year panel, direction-aligned variables
+│   └── validation/           # Post-shock outcome datasets (kept separate from ordering data)
 │
 ├── notebooks/
-│   ├── preprocessing/
-│   ├── poset_analysis/
-│   └── shock_validation/
-│
-├── src/
-│   ├── preprocessing/
-│   ├── dominance/
-│   ├── poset/
-│   └── validation/
+│   ├── preprocessing/        # Data acquisition, harmonization, missing-data handling
+│   ├── poset_analysis/       # Ordinal profiling, dominance computation, Hasse diagrams
+│   └── shock_validation/     # GDP recovery, multi-indicator frontier vs non-frontier comparison
 │
 ├── results/
-│   ├── matrices/
-│   ├── hasse_diagrams/
-│   ├── plots/
-│   └── reports/
+│   ├── matrices/             # Dominance and comparability matrices
+│   ├── hasse_diagrams/       # Exported Hasse diagram figures (per shock baseline)
+│   ├── plots/                # Robustness, validation and sensitivity figures
+│   └── reports/              # Summary tables and final output CSVs
 │
 ├── paper/
-│   └── draft/
+│   └── draft/                # LaTeX source and compiled PDF
 │
 └── README.md
 ```
 
 ---
 
-# Workflow
+## Reproducing the Analysis
 
-## Step 1 — Data Collection
+### Requirements
 
-* Download OECD country-year indicators
+```bash
+pip install -r requirements.txt
+```
 
-## Step 2 — Preprocessing
+Core dependencies: `pandas`, `numpy`, `networkx`, `matplotlib`, `seaborn`, `requests`, `pandasdmx`
 
-* Cleaning
-* Missing value handling
-* Direction alignment
-* Robust normalization
+### Execution Order
 
-## Step 3 — POSet Construction
+Run the notebooks in sequence:
 
-* Build ε-dominance relations
-* Generate dominance matrix
-* Compute comparability structure
-* Extract Hasse diagram
+```
+1. notebooks/preprocessing/    → produces data/processed/
+2. notebooks/poset_analysis/   → produces results/matrices/ and results/hasse_diagrams/
+3. notebooks/shock_validation/ → produces results/plots/ and results/reports/
+```
 
-## Step 4 — Shock Validation
-
-* Build pre-shock POSet
-* Compare against post-shock outcomes
+Each notebook produces intermediate diagnostic outputs and final report-ready tables. Stages are modular and can be re-run independently after the processed data is in place.
 
 ---
 
-# Academic Relevance
+## Key Design Choices
 
-The project integrates:
+**Why POSet instead of a composite index?**  
+Composite indicators assume all dimensions are tradeable and reduce heterogeneous profiles to a single number. A country strong in R&D but weak in debt capacity would appear comparable to a country with the opposite profile — hiding a structural difference that is meaningful for resilience. POSet reports this as incomparability rather than forcing a false ranking.
 
-* economic resilience theory,
-* complexity economics,
-* Pareto dominance,
-* and Partial Order Theory.
+**Why single-year snapshots (2007, 2019)?**  
+The ordering variables are slow-moving structural indicators. A single pre-shock snapshot preserves temporal priority between the structural order and the validation outcomes, preventing outcome leakage.
 
-The final result is not a ranking system, but a:
+**Why exclude WGI from the ordering set?**  
+WGI is itself a composite built from multiple underlying sources. Including it would reintroduce hidden aggregation inside the POSet — contradicting the project's core methodological commitment to transparency. Governance is retained as contextual material.
 
-> structural topology of economic resilience across OECD economies.
+---
+
+## AI Tools Declaration
+
+Generative AI tools (Claude by Anthropic and ChatGPT by OpenAI) were used exclusively for code refinement and debugging during implementation of the data acquisition, preprocessing and POSet construction pipeline. All research design decisions, methodological choices, analytical interpretations and written content were produced independently by the authors.
+
+---
+
+## References
+
+- Martin, R. (2012). Regional Economic Resilience, Hysteresis and Recessionary Shocks.
+- Martin, R., Sunley, P. (2015). On the Notion of Regional Economic Resilience.
+- Bruggemann, R., Carlsen, L. An Improved Estimation of Partial Order Ranking.
+- Davey, B.A., Priestley, H.A. *Introduction to Lattices and Order*. Cambridge University Press.
+- OECD (2008). Handbook on Constructing Composite Indicators.
+- Cherp & Jewell (2014). The Concept of Energy Security.
+- [OECD Data Explorer](https://data-explorer.oecd.org/) · [Eurostat](https://ec.europa.eu/eurostat) · [World Bank](https://data.worldbank.org/)

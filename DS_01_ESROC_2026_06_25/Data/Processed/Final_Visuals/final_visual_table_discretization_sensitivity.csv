@@ -1,7 +1,0 @@
-shock_id,levels,countries,variables,unique_profiles,profile_uniqueness_ratio,max_countries_per_profile,is_main_choice
-2007,3,25,5,22,0.88,2,False
-2007,4,25,5,25,1.0,1,False
-2007,5,25,5,25,1.0,1,True
-2019,3,35,5,28,0.8,2,False
-2019,4,35,5,35,1.0,1,False
-2019,5,35,5,34,0.9714285714285714,2,True

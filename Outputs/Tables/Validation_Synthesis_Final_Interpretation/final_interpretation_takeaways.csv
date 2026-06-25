@@ -1,0 +1,10 @@
+takeaway_area,shock_id,takeaway,report_section,claim_strength
+Main POSet structure,2007,"The 2007 POSet contains 25 countries, 25 unique profiles, and an incomparability ratio of 0.68.",Results,strong_descriptive
+Main POSet structure,2019,"The 2019 POSet contains 35 countries, 34 unique profiles, and an incomparability ratio of 0.77.",Results,strong_descriptive
+Multi-indicator validation,2007,Frontier countries outperform non-frontier countries on 5/6 available macro validation metrics.,Validation,descriptive_validation
+Multi-indicator validation,2019,Frontier countries outperform non-frontier countries on 5/6 available macro validation metrics.,Validation,descriptive_validation
+GDP recovery validation,2007,Frontier countries recover faster on average by approximately 0.82 years relative to non-frontier countries.,Validation,descriptive_validation
+GDP recovery validation,2019,Frontier countries recover faster on average by approximately 0.26 years relative to non-frontier countries.,Validation,descriptive_validation
+Methodological guardrail,all,The project should not be presented as a single universal Economic Resilience Index.,Methodology / conclusion,methodological_decision
+Temporal design,all,The POSet uses two shock-specific pre-shock cross-sections rather than a 22-year average profile.,Methodology,methodological_decision
+Validation interpretation,all,Validation results are descriptive and should not be interpreted as causal evidence.,Limitations / discussion,interpretation_caution

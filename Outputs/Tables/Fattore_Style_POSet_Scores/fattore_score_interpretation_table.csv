@@ -1,0 +1,6 @@
+score_name,meaning,interpretation,index_warning
+observed_dominance_score_normalized,Share of observed profiles dominated by the profile.,Higher values indicate a structurally stronger observed profile position.,Diagnostic only; do not average into final index.
+observed_incomparability_score_normalized,Share of observed profiles incomparable with the profile.,Higher values indicate that forced ranking is less reliable.,"Incomparability is a substantive POSet result, not a problem to hide."
+embedded_dominance_score_normalized,Profile dominance share in the full possible ordinal profile space.,Higher values indicate stronger theoretical POSet position in the product order.,Diagnostic only; depends on chosen ordinal levels and variables.
+embedded_incomparability_score_normalized,Profile incomparability share in the full possible ordinal profile space.,Higher values indicate more multidimensional trade-off structure.,Do not interpret as bad/good without context.
+embedded_separation_score_normalized,Distance-like diagnostic based on profile-space intervals to dominated profiles.,Higher values indicate stronger separation from structurally lower profiles.,"Useful for explanation, not for creating a final ranking."

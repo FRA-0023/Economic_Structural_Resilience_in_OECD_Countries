@@ -1,0 +1,7 @@
+topic,note
+Scope,This notebook adds Fattore-style diagnostic scores on top of the profile POSet. It does not replace the Hasse diagrams or create a final Economic Resilience Index.
+Observed dominance,Observed dominance score is the share of observed profiles dominated by a profile.
+Observed incomparability,Observed incomparability score is the share of observed profiles incomparable with a profile.
+Embedded/full-space scoring,"Embedded scores use the full ordinal profile space implied by the five variables and five profile levels, not only the observed countries."
+Separation-style score,The separation-style score counts ordinal profile-space intervals between comparable profiles. It is a distance-like diagnostic score.
+Interpretation warning,Higher dominance or separation scores help explain POSet position. They should not be presented as a final scalar resilience index.

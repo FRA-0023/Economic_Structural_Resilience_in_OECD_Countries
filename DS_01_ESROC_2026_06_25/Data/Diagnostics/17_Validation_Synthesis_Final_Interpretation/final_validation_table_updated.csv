@@ -1,3 +1,0 @@
-shock_id,countries,unique_profiles,frontier_countries,layers,incomparability_ratio,gdp_recovery_frontier_advantage_years,multi_indicator_frontier_better_metrics,multi_indicator_available_metrics,frontier_better_share,interpretation
-2007,25,25,8,5,0.68,0.8235294117647056,5,6,0.8333333333333334,"Frontier countries show generally stronger post-shock validation outcomes, with some mismatch cases."
-2019,35,34,13,4,0.7700534759358288,0.263157894736842,5,6,0.8333333333333334,"Frontier countries show generally stronger post-shock validation outcomes, with some mismatch cases."

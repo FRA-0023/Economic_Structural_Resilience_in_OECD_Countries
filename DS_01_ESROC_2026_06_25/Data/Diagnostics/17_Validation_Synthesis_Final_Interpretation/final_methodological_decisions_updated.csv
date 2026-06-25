@@ -1,7 +1,0 @@
-decision,final_choice,reason,report_location
-Use five final ordering variables,"debt capacity, employment strength, R&D intensity, tertiary human capital, energy security","Balances coverage, conceptual breadth, and redundancy control.",Data / Methodology
-Use five ordinal levels,5-level profile construction,Preserves profile differentiation while remaining interpretable.,Methodology / Sensitivity
-Use two single pre-shock cross-sections,2007 and 2019,Keeps ordering variables temporally prior to shock outcomes and avoids averaging across structurally different periods.,Methodology
-Keep recovery and macro indicators as validation only,post-shock validation outcomes,Avoids outcome leakage into POSet construction.,Validation / Limitations
-Do not create a final scalar index,POSet framework with frontier/layer/incomparability interpretation,Avoids arbitrary compensation/trade-offs across dimensions.,Introduction / Conclusion
-Use Fattore-style scores diagnostically,"dominance, incomparability, separation-style scores",Adds interpretability without replacing POSet structure.,Results / Appendix

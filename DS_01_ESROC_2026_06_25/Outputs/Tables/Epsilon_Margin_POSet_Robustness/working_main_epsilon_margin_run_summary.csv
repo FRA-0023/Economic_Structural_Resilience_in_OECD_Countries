@@ -1,3 +1,0 @@
-shock_id,baseline_year,epsilon_margin,countries,relations,hasse_edges,frontier_countries,comparability_ratio,incomparability_ratio,is_valid_partial_order,robustness_role,reference_role
-2007,2007,0.1,25,58,49,12,0.19333333333333333,0.8066666666666666,True,epsilon_margin_sensitivity_not_main_profile_poset,robustness_reference_only_not_main_profile_poset
-2019,2019,0.1,35,81,70,20,0.1361344537815126,0.8638655462184874,True,epsilon_margin_sensitivity_not_main_profile_poset,robustness_reference_only_not_main_profile_poset

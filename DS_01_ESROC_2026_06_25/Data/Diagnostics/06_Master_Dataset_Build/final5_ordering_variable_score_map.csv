@@ -1,6 +1,0 @@
-raw_variable,score_column,concept,direction,report_note,is_final_ordering_variable
-public_debt_gdp_canonical,debt_capacity_score_0_100,Debt capacity,lower_is_better,Lower public debt/GDP is interpreted as greater debt capacity.,True
-unemployment_rate,employment_strength_score_0_100,Employment strength,lower_is_better,Lower unemployment is interpreted as greater labour-market strength.,True
-rd_gdp,rd_intensity_score_0_100,R&D intensity,higher_is_better,Higher R&D expenditure as a percentage of GDP is interpreted as stronger innovation capacity.,True
-tertiary_education_25_64,human_capital_tertiary_score_0_100,Human capital,higher_is_better,"Higher adult tertiary educational attainment, age 25–64, is interpreted as stronger human-capital stock.",True
-energy_import_dependency_raw,energy_security_score_0_100,Energy security,lower_is_better,Lower net energy import dependency is interpreted as greater energy security. Negative raw values can occur for net exporters and are not clipped.,True

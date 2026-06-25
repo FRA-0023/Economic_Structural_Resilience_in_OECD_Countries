@@ -1,2 +1,0 @@
-run_id,created_at,main_variable_set,main_variable_count,main_levels,temporal_design,figures_created,tables_created,validation_figures_added,note
-20260625_155224,2026-06-25 15:52:24,baseline_5_variables,5,5,2007 and 2019 single pre-shock cross-sections,45,21,45,Final validation visuals update. Does not create a scalar index.

@@ -1,6 +1,0 @@
-variable_key,resolved_column,available,candidate_columns
-gdp_growth,gdp_growth,True,"gdp_growth, GDP_growth, gdp_growth_rate"
-unemployment_rate,unemployment_rate,True,"unemployment_rate, unemployment"
-inflation_cpi,inflation_cpi,True,"inflation_cpi, inflation_rate, cpi_inflation"
-public_debt_gdp_canonical,public_debt_gdp_canonical,True,"public_debt_gdp_canonical, public_debt_gdp, debt_gdp"
-productivity_gdp_per_hour,productivity_gdp_per_hour,True,"productivity_gdp_per_hour, productivity, gdp_per_hour"

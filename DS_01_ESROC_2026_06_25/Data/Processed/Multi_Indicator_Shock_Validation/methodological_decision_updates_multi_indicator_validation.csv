@@ -1,4 +1,0 @@
-decision,choice,reason,risk_controlled
-Use multi-indicator validation after POSet construction,"GDP growth, unemployment, inflation, public debt, productivity",Checks whether structural POSet position aligns with broader post-shock macro outcomes.,Avoids relying only on GDP recovery years.
-Keep validation indicators outside ordering,validation only,They are post-shock outcomes or macro outcome metrics.,Prevents outcome leakage into the POSet.
-Use shock-specific post windows,2008–2012 for 2007 shock; 2020–2023 for 2019 shock,Captures near/post-shock macro adjustment windows while preserving pre-shock baseline ordering.,Separates structural baseline from validation horizon.

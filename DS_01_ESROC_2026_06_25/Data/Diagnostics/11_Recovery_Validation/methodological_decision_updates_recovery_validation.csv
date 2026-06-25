@@ -1,4 +1,0 @@
-decision,choice,reason,risk_controlled
-Use GDP recovery only as validation,Recovery_2007 and Recovery_2019 are external outcomes,"Recovery is an observed outcome after the shock, not a pre-shock capacity variable.",Prevents outcome leakage into POSet ordering.
-Validate main profile POSet first,Frontier/layer/profile comparison against recovery,The main result is the 5-level profile POSet from Notebook 08.,Keeps robustness checks separate from the primary empirical structure.
-Include mismatch cases,frontier-but-slow and deep-layer-but-fast cases,Mismatch cases improve interpretation and avoid overclaiming.,Prevents treating POSet position as deterministic prediction.

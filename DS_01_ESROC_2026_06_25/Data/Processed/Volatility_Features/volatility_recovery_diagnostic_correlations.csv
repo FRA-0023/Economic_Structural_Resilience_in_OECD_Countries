@@ -1,3 +1,0 @@
-shock_id,n_countries,corr_stability_score_vs_recovery_years,corr_volatility_sd_vs_recovery_years,note
-2007,44,0.0343446010359183,-0.03434460103591835,Diagnostic only. Recovery is not used as a POSet ordering variable.
-2019,43,0.12647555148497908,-0.1264755514849792,Diagnostic only. Recovery is not used as a POSet ordering variable.

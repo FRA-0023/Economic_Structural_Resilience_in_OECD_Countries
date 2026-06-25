@@ -1,0 +1,6 @@
+figure_file,caption
+18_final_validation_synthesis_dashboard.png,"Final validation synthesis dashboard combining POSet incomparability, multi-indicator validation support, and GDP recovery advantage. The figure summarizes validation evidence without converting the POSet into a scalar index."
+18_gdp_vs_multi_indicator_validation_comparison.png,Comparison between GDP recovery validation and broader multi-indicator validation. Frontier countries show faster recovery on average and outperform non-frontier countries on most macro validation indicators.
+18_macro_indicator_frontier_advantage_shock_2007.png / 18_macro_indicator_frontier_advantage_shock_2019.png,Direction-aligned frontier advantage by macro validation indicator. Positive values mean frontier countries perform better than non-frontier countries on the given post-shock outcome.
+18_validation_mismatch_case_summary.png,Mismatch cases by validation layer and shock. These cases are expected in a multidimensional framework and indicate where post-shock outcomes diverge from structural POSet position.
+18_poset_incomparability_vs_validation_support.png,Relationship between POSet incomparability and validation support. High incomparability shows why a scalar ranking would hide structural trade-offs.

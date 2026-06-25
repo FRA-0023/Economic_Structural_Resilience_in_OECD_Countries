@@ -1,4 +1,0 @@
-decision,choice,reason,sensitivity_or_check
-Main discretization uses five ordinal levels,5 levels / quintile-like profiling,Balances interpretability with sufficient differentiation for 25 and 35 complete-case countries.,"Compare 3, 4, and 5 levels in sensitivity analysis."
-Use baseline_5_variables as main POSet set,"debt_capacity_score_0_100,employment_strength_score_0_100,rd_intensity_score_0_100,human_capital_tertiary_score_0_100,energy_security_score_0_100",Covers five distinct structural capacity dimensions without governance redundancy.,Run variable-set sensitivity checks downstream.
-Keep validation variables outside ordering,GDP recovery and macro indicators only for validation,Prevents outcome leakage into POSet construction.,Validation notebook compares profiles/layers/frontiers against recovery outcomes.

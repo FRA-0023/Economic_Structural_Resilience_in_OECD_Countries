@@ -1,0 +1,7 @@
+topic,report_text
+Dominance rule,Profile A dominates profile B when A is at least as high as B in all five ordinal dimensions and strictly higher in at least one dimension. This produces a partial order rather than a total ranking.
+Profile-level construction,The main POSet is constructed at the profile level. Countries with the same five-dimensional ordinal profile occupy the same node in the Hasse diagram.
+Layer interpretation,Layer 1 contains undominated frontier profiles. Subsequent layers are obtained iteratively after removing the profiles in previous layers. Layer numbers should not be interpreted as a scalar resilience index.
+Incomparability,"Incomparability is a substantive result of the POSet approach: two countries or profiles may each be stronger in different dimensions, so the method avoids forcing an arbitrary total ranking."
+Digit-sum warning,The profile digit-sum is used only as a layout and diagnostic aid. It is not used as a ranking rule and does not replace the dominance relation.
+Temporal design,The profile POSet is built separately for the 2007 and 2019 pre-shock cross-sections. The two POSet structures should therefore be interpreted as shock-specific structural snapshots.

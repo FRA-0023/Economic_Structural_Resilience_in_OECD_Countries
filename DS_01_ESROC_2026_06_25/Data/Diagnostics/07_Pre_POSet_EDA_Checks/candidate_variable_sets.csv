@@ -1,4 +1,0 @@
-set_name,set_role,variables,n_variables,include_governance,include_volatility,include_recovery,reason
-baseline_5_variables,main,"debt_capacity_score_0_100,employment_strength_score_0_100,rd_intensity_score_0_100,human_capital_tertiary_score_0_100,energy_security_score_0_100",5.0,False,False,False,Final main POSet variable set: five conceptually distinct pre-shock structural capacity dimensions.
-sensitivity_drop_energy_security,sensitivity,"debt_capacity_score_0_100,employment_strength_score_0_100,rd_intensity_score_0_100,human_capital_tertiary_score_0_100",4.0,False,False,False,Sensitivity check because energy security can behave differently for exporters and importers.
-sensitivity_drop_most_correlated_pair_member,sensitivity_placeholder,to_be_selected_from_redundancy_pairs_if_needed,,False,False,False,Optional sensitivity if redundancy diagnostics show a high-correlation pair.

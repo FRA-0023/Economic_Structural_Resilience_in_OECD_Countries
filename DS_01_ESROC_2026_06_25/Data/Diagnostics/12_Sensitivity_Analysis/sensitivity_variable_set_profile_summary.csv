@@ -1,5 +1,0 @@
-shock_id,baseline_year,variable_set,n_variables,levels,countries,unique_profiles,profile_uniqueness_ratio,dominance_relations,hasse_edges,layers,frontier_profiles,frontier_countries,comparability_ratio,incomparability_ratio,sensitivity_type,is_main_variable_set
-2007,2007,baseline_5_variables,5,5,25,25,1.0,96,52,5,8,8,0.32,0.68,variable_set,True
-2019,2019,baseline_5_variables,5,5,35,34,0.9714285714285714,129,64,4,12,13,0.22994652406417113,0.7700534759358288,variable_set,True
-2007,2007,sensitivity_drop_energy_security,4,5,25,25,1.0,122,55,5,6,6,0.4066666666666667,0.5933333333333334,variable_set,False
-2019,2019,sensitivity_drop_energy_security,4,5,35,34,0.9714285714285714,218,83,7,4,4,0.38859180035650626,0.6114081996434938,variable_set,False

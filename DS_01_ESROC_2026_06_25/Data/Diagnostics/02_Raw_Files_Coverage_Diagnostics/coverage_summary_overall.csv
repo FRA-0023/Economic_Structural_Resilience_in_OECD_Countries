@@ -1,2 +1,0 @@
-run_id,run_timestamp,start_year,end_year,standardized_rows,countries_total,variables_total,final5_ordering_variable_count,validation_variable_count,complete_final5_baseline_countries_2007,complete_final5_baseline_countries_2019,wgi_role,poset_baseline_years,pre_shock_diagnostic_windows
-20260624_181529,2026-06-24 18:15:29,2002,2025,12597,177,10,5,5,25,35,contextual_or_sensitivity_only_not_final_ordering,"2007,2019",2002-2007;2012-2019

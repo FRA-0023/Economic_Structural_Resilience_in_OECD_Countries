@@ -1,4 +1,0 @@
-decision,choice,reason,risk_controlled
-Test country-level epsilon tolerance,epsilon grid 0.00 to 0.20,Checks how dominance/frontier structure changes when small score differences are tolerated.,Makes sensitivity explicit instead of reporting an unstated epsilon rule.
-Detect cycles for epsilon tolerance,reciprocal-pair and topological cycle diagnostics,Tolerance-based dominance can violate antisymmetry/transitivity requirements of a partial order.,Prevents invalid epsilon structures from being interpreted as the main POSet.
-Keep epsilon sensitivity diagnostic,main result remains profile-level POSet,Profile-level POSet is more interpretable and methodologically cleaner for the report.,Avoids replacing the main ordinal POSet with a tolerance relation that may create cycles.
