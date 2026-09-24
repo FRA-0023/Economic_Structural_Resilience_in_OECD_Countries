@@ -1,9 +1,10 @@
-﻿# 🏛️ Economic Structural Resilience in OECD Countries: A POSet-Based Framework
+# 🏛️ Economic Structural Resilience in OECD Countries: A POSet-Based Framework
 
 [![Language](https://img.shields.io/badge/Language-Jupyter%20Notebooks-orange?style=flat&logo=jupyter)](https://jupyter.org/)
 [![Methodology](https://img.shields.io/badge/Methodology-Partial%20Order%20Theory%20(POSet)-blue)](#)
 [![Validation](https://img.shields.io/badge/Validation-2008%20GFC%20%7C%20COVID--19-red)](#)
 [![Report](https://img.shields.io/badge/Report-Complete%20Research%20Paper-red?logo=adobeacrobatreader)](Economic%20Structural%20Resilience%20in%20OECD%20Countries%20-%20Colombini,%20Haider.pdf)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > Evaluating macroeconomic shock resilience across OECD nations without arbitrary composite index weighting, using pure non-parametric discrete mathematics (POSet & Hasse Diagrams).
 
